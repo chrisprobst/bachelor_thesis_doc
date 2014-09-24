@@ -1,0 +1,9 @@
+# Mac
+.DS_Store
+
+# Ignore tmp files
+*~
+*odt#
+
+# Ignore svn folders
+.svn
