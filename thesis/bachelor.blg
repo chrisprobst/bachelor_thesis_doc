@@ -4,50 +4,52 @@ The top-level auxiliary file: bachelor.aux
 A level-1 auxiliary file: bachelor-titlepage.aux
 The style file: alphadin.bst
 A level-1 auxiliary file: bachelor-declaration.aux
+I found no \citation commands---while reading file bachelor.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex-references.bib
-You've used 1 entry,
+You've used 0 entries,
             4857 wiz_defined-function locations,
-            905 strings with 6628 characters,
-and the built_in function-call counts, 829 in all, are:
-= -- 83
-> -- 31
-< -- 39
-+ -- 47
-- -- 13
-* -- 52
-:= -- 162
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 7
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 15
-empty$ -- 30
-format.name$ -- 21
-if$ -- 135
+            900 strings with 6364 characters,
+and the built_in function-call counts, 39 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 13
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 2
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 15
-num.names$ -- 3
-pop$ -- 7
+missing$ -- 0
+newline$ -- 10
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 0
 quote$ -- 0
-skip$ -- 54
+skip$ -- 2
 stack$ -- 0
-substring$ -- 49
-swap$ -- 5
-text.length$ -- 4
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 10
+type$ -- 0
 warning$ -- 0
-while$ -- 7
-width$ -- 2
-write$ -- 18
+while$ -- 0
+width$ -- 0
+write$ -- 7
+(There was 1 error message)

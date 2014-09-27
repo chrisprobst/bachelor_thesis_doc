@@ -4,6 +4,7 @@
 # Ignore tmp files
 *~
 *odt#
+*odg#
 
 # Ignore svn folders
 .svn

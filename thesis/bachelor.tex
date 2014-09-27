@@ -11,7 +11,7 @@ liststotoc,bibtotoc]{scrbook}
 \usepackage{mathptmx}
 \usepackage[scaled=0.92]{helvet}
 \usepackage{courier}
-\usepackage{amsmath}
+\usepackage{mathtools}
 \makeatletter
 \def\displaymath{\typeout{*** Do not use DISPLAYMATH. Use \[...\] instead ***}}
 \def\eqnarray{\typeout{*** Do not use EQNARRAY(*). Use align(*)-environment instead ***}}
@@ -31,10 +31,15 @@ liststotoc,bibtotoc]{scrbook}
 \usepackage[plainpages=false,pdfpagelabels]{hyperref}
 \usepackage{cite}
 
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
 \input{bachelor-meta}
 
 \usepackage{lscape}
 \usepackage{tabularx}
+
+
 
 \ifpdf
     \definecolor{brown}{cmyk}{0, 0.81, 1, 0.60}
@@ -88,13 +93,17 @@ liststotoc,bibtotoc]{scrbook}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{chapter-intro}
-
+\cleardoublepage
 \input{chapter-related-work}
-
-\input{chapter-main}
+\cleardoublepage
+\input{chapter-theory}
+\cleardoublepage
 \input{chapter-architecture}
-\input{chapter-modules}
-
+\cleardoublepage
+\input{chapter-frame-modules}
+\cleardoublepage
+\input{chapter-app-modules}
+\cleardoublepage
 \input{chapter-evaluation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
