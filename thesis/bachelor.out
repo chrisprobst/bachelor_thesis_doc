@@ -24,10 +24,14 @@
 \BOOKMARK [2][-]{subsubsection.5.2.0.3}{5.2.0.3 Meta-Data}{section.5.2}% 24
 \BOOKMARK [3][-]{subsubsection.5.2.0.4}{5.2.0.4 Backends: In-Memory and Filesystem}{subsubsection.5.2.0.3}% 25
 \BOOKMARK [1][-]{section.5.3}{5.3 Module: Algorithm}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.4}{5.4 Module: Monitoring}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{6 Application Modules}{}% 28
-\BOOKMARK [1][-]{section.6.1}{6.1 Module: Benchmark}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.2}{6.2 Module: Record-Viewer}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.3}{6.3 Module: Streaming}{chapter.6}% 31
-\BOOKMARK [0][-]{chapter.7}{7 Evaluation}{}% 32
-\BOOKMARK [0][-]{chapter*.4}{Literaturverzeichnis}{}% 33
+\BOOKMARK [2][-]{subsubsection.5.3.0.5}{5.3.0.5 Algorithm: Sequential}{section.5.3}% 27
+\BOOKMARK [3][-]{subsubsection.5.3.0.6}{5.3.0.6 Algorithm: Logarithmic}{subsubsection.5.3.0.5}% 28
+\BOOKMARK [3][-]{subsubsection.5.3.0.7}{5.3.0.7 Algorithm: ChunkedSwarm}{subsubsection.5.3.0.5}% 29
+\BOOKMARK [3][-]{subsubsection.5.3.0.8}{5.3.0.8 Algorithm: SuperSeederChunkedSwarm}{subsubsection.5.3.0.5}% 30
+\BOOKMARK [1][-]{section.5.4}{5.4 Module: Monitoring}{chapter.5}% 31
+\BOOKMARK [0][-]{chapter.6}{6 Application Modules}{}% 32
+\BOOKMARK [1][-]{section.6.1}{6.1 Module: Benchmark}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.2}{6.2 Module: Record-Viewer}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.3}{6.3 Module: Streaming}{chapter.6}% 35
+\BOOKMARK [0][-]{chapter.7}{7 Evaluation}{}% 36
+\BOOKMARK [0][-]{chapter*.4}{Literaturverzeichnis}{}% 37

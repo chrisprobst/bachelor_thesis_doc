@@ -20,11 +20,15 @@
 \contentsline {section}{\numberline {5.2}Module: DataBase}{17}{section.5.2}
 \contentsline {subsubsection}{\numberline {5.2.0.3}Meta-Data}{17}{subsubsection.5.2.0.3}
 \contentsline {subsubsection}{\numberline {5.2.0.4}Backends: In-Memory and Filesystem}{18}{subsubsection.5.2.0.4}
-\contentsline {section}{\numberline {5.3}Module: Algorithm}{18}{section.5.3}
-\contentsline {section}{\numberline {5.4}Module: Monitoring}{18}{section.5.4}
-\contentsline {chapter}{\numberline {6}Application Modules}{19}{chapter.6}
-\contentsline {section}{\numberline {6.1}Module: Benchmark}{19}{section.6.1}
-\contentsline {section}{\numberline {6.2}Module: Record-Viewer}{19}{section.6.2}
-\contentsline {section}{\numberline {6.3}Module: Streaming}{19}{section.6.3}
-\contentsline {chapter}{\numberline {7}Evaluation}{21}{chapter.7}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{23}{chapter*.4}
+\contentsline {section}{\numberline {5.3}Module: Algorithm}{19}{section.5.3}
+\contentsline {subsubsection}{\numberline {5.3.0.5}Algorithm: Sequential}{19}{subsubsection.5.3.0.5}
+\contentsline {subsubsection}{\numberline {5.3.0.6}Algorithm: Logarithmic}{19}{subsubsection.5.3.0.6}
+\contentsline {subsubsection}{\numberline {5.3.0.7}Algorithm: ChunkedSwarm}{19}{subsubsection.5.3.0.7}
+\contentsline {subsubsection}{\numberline {5.3.0.8}Algorithm: SuperSeederChunkedSwarm}{19}{subsubsection.5.3.0.8}
+\contentsline {section}{\numberline {5.4}Module: Monitoring}{21}{section.5.4}
+\contentsline {chapter}{\numberline {6}Application Modules}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Module: Benchmark}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Module: Record-Viewer}{23}{section.6.2}
+\contentsline {section}{\numberline {6.3}Module: Streaming}{23}{section.6.3}
+\contentsline {chapter}{\numberline {7}Evaluation}{25}{chapter.7}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{27}{chapter*.4}

@@ -136,9 +136,39 @@ The Benchmark module uses this backend to reduce overhead introduced by the file
 
 Related to future work is the filesystem backend which implements a persistent database based on a filesystem. The filesystem can also be virtual like a ZIP file. This backend is more rigid but also very important for file-sharing applications.
 
+\cleardoublepage
 \section{Module: Algorithm}
 \label{sec:algorithm}
+This module contains the logic of the whole implementation. While the Core-Framework module takes care of all the low-level parts the real work is done here. This module defines two interfaces for both a seeder and a leecher which are called SeederDistributionAlgorithm and LeecherDistributionAlgorithm respectively. 
 
+A SeederDistributionAlgorithm can modify Meta-Data which is announced by a seeder and allows or rejects chunk requests. A LeecherDistributionAlgorithm is even simpler, it can only request chunks. A simplified implementation of both interfaces would look like this:
+
+\begin{verbatim}
+interface SeederDistributionAlgorithm {
+    list of metaData modifyMetaData(list of metaData);
+    boolean isChunkRequestAllowed(chunkRequest);
+}
+
+interface LeecherDistributionAlgorithm {
+    list of chunkRequest requestChunks(availableDataSetsOfAllSeeders);
+}
+\end{verbatim}
+
+As you can see, those interfaces are totally independend of the underlying network implementation. The core concept is that a leecher algorithm is only interested in requesting chunks as efficient as possible. The seeder can decide if a requested chunk request is allowed or not and what Meta-Data it announces. With those two methods a seeder can model the behaviour of a seeder which uploads to everybody, or only one upload in total, or even stop announcing Meta-Data if the associated data sets have already been transferred, which is used by the SuperSeederChunkedSwarm algorithm, which is explained in section \ref{subsubsec:superseederchunkedswarm}.
+
+\subsubsection{Algorithm: Sequential}
+\label{subsubsec:sequential}
+
+\subsubsection{Algorithm: Logarithmic}
+\label{subsubsec:logarithmic}
+
+\subsubsection{Algorithm: ChunkedSwarm}
+\label{subsubsec:chunkedswarm}
+
+\subsubsection{Algorithm: SuperSeederChunkedSwarm}
+\label{subsubsec:superseederchunkedswarm}
+
+\cleardoublepage
 \section{Module: Monitoring}
 \label{sec:monitoring}
 
