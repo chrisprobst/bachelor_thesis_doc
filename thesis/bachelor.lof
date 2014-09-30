@@ -1,12 +1,17 @@
-\select@language {ngerman}
+\select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Client/Server model}}{5}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Peer mesh}}{6}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Logarithmic distribution of 4 peers}}{7}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Chunked-Swarm distribution of 4 peers with 3 chunks}}{8}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Efficiency of the Chunked-Swarm distribution}}{8}{figure.3.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Software architecture}}{7}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Software architecture}}{9}{figure.4.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Seeder Discovery}}{10}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Mesh topology}}{11}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Reconnect}}{11}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Seeder Discovery}}{12}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Leecher/Seeder mesh}}{12}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Reconnect}}{13}{figure.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,1 +1,17 @@
 \chapter{Introduction}
+\section{Problem and Motivation}
+Traditional networks are mostly based on the client/server model where the server only responds to client requests and the clients do not know each other. Depending on the application the server has to provide enough bandwidth to serve the clients fast enough.
+
+In case of real-time video streaming, a server has to guarantee, that new clients will not influence the performance of running video streams of the remaining clients, which are already connected to the server. The consequence of that is, that a video streaming server can fundamentally only serve a certain number of clients, which are able to watch the video stream fluently, so this approach has scalability issues.
+
+To improve this unbalance the clients could use their own upload capacity to help the server distributing a given data set. In this case the network is called a P2P network, where every participant is called a peer. If all peers have enough upload bandwidth, it is possible to create a P2P network, which is able to distribute a given data set evenly among all peers in a fixed time relative to the number of participating peers.
+
+\section{Objective}
+This thesis concentrates on implementing a P2P network, which is able to distribute a given data set among any number of clients and never exceeds $2 \cdot T$ where $T$ is the time needed for a single transfer between the server and a client measured in seconds.
+
+To reach this goal different distribution algorithms are implemented and evaluated to compare advantages and disadvantages. The resulting software is able to measure those algorithms in terms of efficiency, overhead and performance.
+
+The solution is generic and can be used for any kind of data set transfers like video streaming or large file transfers.
+
+\section{Structure}
+The thesis starts with evaluating existing concepts in chapter \ref{ch:relatedwork} and comparing them with the concepts, which are proposed and theoretically discussed in chapter \ref{ch:theory}. Then the architecture of the software is explained in chapter \ref{ch:arch}. The framework and application modules are presented in chapter \ref{ch:framework} and \ref{ch:app} respectively. The evaluation of the software follows in chapter \ref{ch:eval}.

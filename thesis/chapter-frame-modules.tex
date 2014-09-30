@@ -1,4 +1,6 @@
 \chapter{Framework Modules}
+\label{ch:framework}
+
 \section{Module: Core-Framework}
 \label{sec:core}
 \subsection{Network}
@@ -16,17 +18,17 @@ While every leecher has to manually connect to a seeder for the first time, afte
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8cm]{autoconnect}
+\includegraphics[width=6cm]{autoconnect}
 \caption{Seeder Discovery}
 \label{fig:autoconnect}
 \end{figure}
 
-Here leecher 1, 2 and 3 announce the address of seeder 1, 2 and 3 respectively to seeder 4 which then broadcasts those addresses to all connected leechers. This way the leechers get to know each other and can connect to the remaining seeders. Though in figure \ref{fig:autoconnect} only leecher 2 is illustrated, leecher 1 and 3 connect to the other seeders as well. Of course, this works recursively, so if one of the seeders 1, 2 or 3 already has other leechers connected to it those will also be found. So in the end the topology is just a mesh with $(n-1)*n$ connections where $n$ refers to the total number of coupled seeders and leechers and every leecher of each couple is connected to every seeder of all other couples. The figure \ref{fig:mesh} shows a mesh of 4 couples where every line counts for two connections.
+Here leecher 1, 2 and 3 announce the address of seeder 1, 2 and 3 respectively to seeder 4 which then broadcasts those addresses to all connected leechers. This way the leechers get to know each other and can connect to the remaining seeders. Though in figure \ref{fig:autoconnect} only leecher 2 is illustrated, leecher 1 and 3 connect to the other seeders as well. Of course, this works recursively, so if one of the seeders 1, 2 or 3 already has other leechers connected to it those will also be found. So in the end the topology is just a mesh with $(n-1)*n$ connections where $n$ refers to the total number of coupled seeders and leechers and every leecher of each couple is connected to every seeder of all other couples. The figure \ref{fig:mesh} shows this from the point of view of leecher 1, which is connected to seeder 2, 3 and 4.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8cm]{mesh}
-\caption{Mesh topology}
+\includegraphics[width=6cm]{mesh}
+\caption{Leecher/Seeder mesh}
 \label{fig:mesh}
 \end{figure}
 
@@ -36,7 +38,7 @@ If a leecher loses, for what ever reason, the connection to a seeder the framewo
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8cm]{reconnect}
+\includegraphics[width=6cm]{reconnect}
 \caption{Reconnect}
 \label{fig:reconnect}
 \end{figure}
@@ -139,22 +141,22 @@ Related to future work is the filesystem backend which implements a persistent d
 \cleardoublepage
 \section{Module: Algorithm}
 \label{sec:algorithm}
-This module contains the logic of the whole implementation. While the Core-Framework module takes care of all the low-level parts the real work is done here. This module defines two interfaces for both a seeder and a leecher which are called SeederDistributionAlgorithm and LeecherDistributionAlgorithm respectively. 
+This module contains the logic part of the implementation. While the Core-Framework module takes care of all the low-level parts the real work is done here. This module defines two interfaces for both a seeder and a leecher, which are called SeederDistributionAlgorithm and LeecherDistributionAlgorithm respectively. 
 
-A SeederDistributionAlgorithm can modify Meta-Data which is announced by a seeder and allows or rejects chunk requests. A LeecherDistributionAlgorithm is even simpler, it can only request chunks. A simplified implementation of both interfaces would look like this:
+A SeederDistributionAlgorithm can modify Meta-Data, which is announced by a seeder and allows or rejects chunk requests. A LeecherDistributionAlgorithm is even simpler, it can only request chunks. A simplified implementation of both interfaces would look like this:
 
 \begin{verbatim}
 interface SeederDistributionAlgorithm {
-    list of metaData modifyMetaData(list of metaData);
-    boolean isChunkRequestAllowed(chunkRequest);
+    List of MetaData modifyMetaData(List of MetaData)
+    Bool isChunkRequestAllowed(ChunkRequest)
 }
 
 interface LeecherDistributionAlgorithm {
-    list of chunkRequest requestChunks(availableDataSetsOfAllSeeders);
+    List of ChunkRequest requestChunks(AvailableDataSetsOfAllSeeders)
 }
 \end{verbatim}
 
-As you can see, those interfaces are totally independend of the underlying network implementation. The core concept is that a leecher algorithm is only interested in requesting chunks as efficient as possible. The seeder can decide if a requested chunk request is allowed or not and what Meta-Data it announces. With those two methods a seeder can model the behaviour of a seeder which uploads to everybody, or only one upload in total, or even stop announcing Meta-Data if the associated data sets have already been transferred, which is used by the SuperSeederChunkedSwarm algorithm, which is explained in section \ref{subsubsec:superseederchunkedswarm}.
+Those interfaces are totally independend of the underlying network implementation. The core concept is, that a leecher algorithm is only interested in requesting chunks as efficient as possible. The seeder can decide if a requested chunk request is allowed or not and what Meta-Data it announces. With those two methods a seeder can model the behaviour of a seeder which uploads to every leecher in parallel, or only to one leecher in total, or even stop announcing Meta-Data if the associated data sets have already been transferred, which is used by the SuperSeederChunkedSwarm algorithm, which is explained in section \ref{subsubsec:superseederchunkedswarm}. In the next sections all implemented distribution aögorithms are compared and explained in detail.
 
 \subsubsection{Algorithm: Sequential}
 \label{subsubsec:sequential}
