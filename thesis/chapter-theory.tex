@@ -11,9 +11,9 @@ In the client/server model, as shown in figure \ref{fig:clientservermodel}, ever
 \label{fig:clientservermodel}
 \end{figure}
 
-If $b$ is the bandwidth of the server in bytes/second, $n$ the number of clients connected to the server and $s$ the size of the whole data set, then $T=\frac{n \cdot s}{b}$ is the time in seconds it would take to complete the transfer. This formula assumes, that the download bandwidth of each client is bigger than the shared upload bandwidth. This assumption applies to all models presented in this chapter. In reality this makes sense, because clients often have a much higher download bandwidth than upload bandwidth. Without adding servers or using the upload bandwidth of the clients this linear relationship cannot be removed. This traditional model is implemented in the Sequential algorithm, which can be found in section \ref{subsubsec:sequential}.
+If $b$ is the bandwidth of the server in bytes/second, $n$ the number of clients connected to the server and $s$ the size of the whole data set, then $T= n \cdot T_0$ is the time in seconds it would take to transfer the data set to all clients, where $T_0=\frac{s}{b}$ is the time in seconds for a single tranfser from the server to a client. This formula assumes, that the download bandwidth of each client is bigger than the shared upload bandwidth. This assumption applies to all models presented in this chapter. In reality this makes sense, because clients often have a much higher download bandwidth than upload bandwidth. Without adding servers or using the upload bandwidth of the clients this linear relationship cannot be removed. This traditional model is implemented in the Sequential algorithm, which can be found in section \ref{subsubsec:sequential}.
 
-From the very first beginning it was clear, that this model is not able to keep the limit of $2 \cdot T$ seconds but it is implemented to show the immense difference. The next section \ref{subsubsec:logarithmicmodel} presents a much better model.
+From the very first beginning it was clear, that this model is not able to keep the limit of $2 \cdot T_0$ seconds but it is implemented to show the immense difference. The next section \ref{subsubsec:logarithmicmodel} presents a much better model.
 
 \pagebreak
 \section{Model: Logarithmic}
@@ -27,9 +27,9 @@ If a P2P network is used instead of a client/server model, where every participa
 \label{fig:peermesh}
 \end{figure}
 
-In the logarithmic model every peer can do both uploading and downloading data sets. The only restriction is, that it can only upload to one other peer in parallel. So if a new data set is announced by one peer in the P2P network, all peers try to download this data set from the given peer. Only one peer, basically the first one, is allowed to download the data set. The rest of the requesting peers are rejected and do nothing after this. When the peer completed the download, there are two peers in the network containing the data set. This time another two peers will be allowed to download the data set. This way the number of downloading peers is doubled every $T$ seconds, which is considered exponential behaviour. 
+In the logarithmic model every peer can do both uploading and downloading data sets. The only restriction is, that it can only upload to one other peer in parallel. So if a new data set is announced by one peer in the P2P network, all peers try to download this data set from the given peer. Only one peer, basically the first one, is allowed to download the data set. The rest of the requesting peers are rejected and do nothing after this. When the peer completed the download, there are two peers in the network containing the data set. This time another two peers will be allowed to download the data set. This way the number of downloading peers is doubled every $T_0 = \frac{s}{u}$ seconds, where $u$ is the upload bandwidth of each peer, which is considered exponential growth. 
 
-At first, this concept might seem even worse than the client/server model, but it turns out, that this model guarantees, that in $T=\log{(n)} \cdot \frac{s}{u}$  seconds every peer has the complete data set, where $u$ refers to the upload bandwidth of each peer. This formula assumes that every peer has the same upload bandwidth $u$, which is not common in real world situations. But it can illustrate the relationship between the upload bandwidth and the number of peers. The figure \ref{fig:logarithmicmodel} shows 4 peers, where peer 1 is the only peer with the data set at first. It transfers the data set to peer 2 in $T$ seconds. Then peer 1 and 2 transfers this data set to peer 3 and 4 respectively in $T$ seconds. So the whole transfer takes $2 \cdot T$ seconds.
+At first, this concept might seem even worse than the client/server model, but it turns out, that this model guarantees, that in $T=\log{(n)} \cdot T_0$  seconds every peer has the complete data set. This formula assumes that every peer has the same upload bandwidth $u$, which is not common in real world situations. But it can illustrate the relationship between the upload bandwidth and the number of peers. The figure \ref{fig:logarithmicmodel} shows 4 peers, where peer 1 is the only peer with the data set at first. It transfers the data set to peer 2 in $T_0$ seconds. Then peer 1 and 2 transfers this data set to peer 3 and 4 respectively in $T_0$ seconds. So the whole transfer takes $2 \cdot T_0$ seconds.
 
 \begin{figure}[H]
 \centering
@@ -40,7 +40,7 @@ At first, this concept might seem even worse than the client/server model, but i
 
 The implementation of this model increases the complexity only marginal, but the efficiency is significantly higher. The more peers there are participating the higher is the efficiency. The overhead is also very manageable because during the transfers the idle peers do nothing except waiting. The problem of this model is that never more than 50\% of all peers are uploading in parallel. Also at the beginning only one peer uploads the data set. This means that in the beginning a majority of all peers do not use their upload bandwidth. This model is implemented in the Logarithmic algorithm, which can be found in section \ref{subsubsec:logarithmic}.
 
-At the end this model cannot provide the $2 \cdot T$ limit we are looking for. To do so this model has to be improved, which is done in the next section \ref{subsubsec:chunkedswarmmodel}.
+At the end this model cannot provide the $2 \cdot T_0$ limit we are looking for. To do so this model has to be improved, which is done in the next section \ref{subsubsec:chunkedswarmmodel}.
 
 
 \section{Model: Chunked-Swarm}
@@ -58,7 +58,7 @@ The implementation of this model is not as easy as the logarithmic one, because 
 
 To determine the efficiency of this model, it is assumed, that the chunk selection works perfectly, which means that all peers request distinct chunks from peer 1. This also implies that there have to be at least as many chunks as there are peers. Less chunks would also work, but then chunk duplication cannot be prevented.
 
-For simplicity it is also assumed, that there are just as many chunks as there are peers. It this case, it would take $T$ seconds to transfer all distinct chunks to all peers. After this, the peers distribute their chunks among themselves, which takes $\frac{2}{3} \cdot T$ seconds, as shown in figure \ref{fig:chunkedswarmformula1}.
+For simplicity it is also assumed, that there are just as many chunks as there are peers. It this case, it would take $T_0$ seconds to transfer all distinct chunks to all peers, because every peer gets a third of the available bandwidth and also has to download a third of the whole data set. After this, the peers distribute their chunks among themselves, which takes $\frac{2}{3} \cdot T_0$ seconds, as shown in figure \ref{fig:chunkedswarmformula1}.
 
 \begin{figure}[H]
 \centering
@@ -67,9 +67,9 @@ For simplicity it is also assumed, that there are just as many chunks as there a
 \label{fig:chunkedswarmformula1}
 \end{figure}
 
-This means that after $T + \frac{2}{3} \cdot T = \frac{5}{3} \cdot T$ seconds every peer has all chunks available. Similiary a variable number of peers need $T + \frac{n - 1}{n} \cdot T = \frac{2n - 1}{n} \cdot T = (2 - \frac{1}{n}) \cdot T$ seconds. A very nice property of this formula is that the result is always smaller than $2 \cdot T$. Without any further optimizations the main objective of this thesis is already fulfilled, as long as the chunk count is equal to or greater than the peer count.
+This means that after $T = T_0 + \frac{2}{3} \cdot T_0 = \frac{5}{3} \cdot T_0$ seconds every peer has all chunks available. Similiary a variable number of peers need $T(n) = T_0 + \frac{n - 1}{n} \cdot T_0 = \frac{2n - 1}{n} \cdot T_0 = (2 - \frac{1}{n}) \cdot T_0$ seconds. A very nice property of this formula is that the result is always smaller than $2 \cdot T_0$. Without any further optimizations the main objective of this thesis is already fulfilled, as long as the chunk count is equal to or greater than the peer count.
 
-If the chunk count is doubled, the formula gets even better. Figure \ref{fig:chunkedswarmformula2} illustrates this scenario. The efficiency rises because the peers can start to upload their own chunks earlier. After $\frac{1}{2} \cdot T$ seconds the peers received the first three distinct chunks from peer 1. At this point the peers can exchange their chunks, which takes $\frac{1}{3} \cdot T$ seconds. So after $\frac{5}{6} \cdot T$ seconds all peers have the first 50\% of the data set. At $T$ seconds the last three distinct chunks arrive which will also be exchanged afterwards. So after $T + \frac{1}{3} \cdot T = \frac{4}{3} \cdot T$ seconds all peers have the data set.
+If the chunk count is doubled, the formula gets even better. Figure \ref{fig:chunkedswarmformula2} illustrates this scenario. The efficiency rises because the peers can start to upload their own chunks earlier. After $\frac{1}{2} \cdot T_0$ seconds the peers received the first three distinct chunks from peer 1. At this point the peers can exchange their chunks, which takes $\frac{1}{3} \cdot T_0$ seconds. So after $\frac{5}{6} \cdot T_0$ seconds all peers have the first 50\% of the data set. At $T$ seconds the last three distinct chunks arrive which will also be exchanged afterwards. So after $T = T_0 + \frac{1}{3} \cdot T_0 = \frac{4}{3} \cdot T_0$ seconds all peers have the data set.
 
 \begin{figure}[H]
 \centering
