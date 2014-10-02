@@ -152,19 +152,21 @@ interface LeecherDistributionAlgorithm {
 }
 \end{verbatim}
 
-Those interfaces are totally independend of the underlying network implementation. The core concept is, that a leecher algorithm is only interested in requesting chunks as efficient as possible. The seeder can decide if a requested chunk request is allowed or not and what Meta-Data it announces. With those two methods a seeder can model the behaviour of a seeder which uploads to every leecher in parallel, or only to one leecher in total, or even stop announcing Meta-Data if the associated data sets have already been transferred, which is used by the SuperSeederChunkedSwarm algorithm, which is explained in section \ref{subsubsec:superseederchunkedswarm}. In the next sections all implemented distribution aögorithms are compared and explained in detail.
+Those interfaces are totally independend of the underlying network implementation. The core concept is, that a leecher algorithm is only interested in requesting chunks as efficient as possible. The seeder can decide if a requested chunk request is allowed or not and what Meta-Data it announces. With those two methods a seeder can model the behaviour of a seeder which uploads to every leecher in parallel, or only to one leecher in total, or even stop announcing Meta-Data if the associated data sets have already been transferred, which is used by the ChunkedSwarm model, which is explained in section \ref{subsubsec:chunkedswarm}. In the next sections all implemented distribution algorithms are compared and explained in detail.
 
-\subsubsection{Algorithm: Sequential}
-\label{subsubsec:sequential}
+\subsubsection{Algorithm: Sequential and Logarithmic}
+\label{subsubsec:seqlog}
+The Sequential and Logarithmic model, explained in section \ref{sec:sequentialmodel} and \ref{sec:logarithmicmodel} respectively, both share the same LeecherDistributionAlgorithm, which is the OrderedSingleMostLeecherDistributionAlgorithm. This algorithm chooses a seeder, which has the complete data set and requests it from this seeder. This algorithm does only work with a chunk count of 1 and never requests a data set from more than one seeder in parallel.
 
-\subsubsection{Algorithm: Logarithmic}
-\label{subsubsec:logarithmic}
+For seeding the Sequential model uses the DefaultSeederDistributionAlgorithm, which uploads data sets to every leecher asking for one. It is important to note, that this model has only one seeder and many leechers. All leechers are connected to this seeder and download data sets sequentially. The Logarithmic model is fundamentally different in this regard, because every peer has a leecher coupled with a seeder and is connected to every other seeder of the network. This model uses the LimitedSeederDistributionAlgorithm for seeding and uploads data sets only to one leecher in parallel. During an upload other requests are rejected. The MetaData of data sets which are being uploaded are also removed from the MetaData announcement set so that new leechers will not request this data set. After the upload is complete, the MetaData is announced again.
 
 \subsubsection{Algorithm: ChunkedSwarm}
 \label{subsubsec:chunkedswarm}
+The ChunkedSwarm model allows multiple uploads in parallel and requires a chunk count equal to or greater than the number of peers. Every seeder uses the DefaultSeederDistributionAlgorithm and thus uploads chunks to every leecher. The leechers use the OrderedChunkedSwarmLeecherDistributionAlgorithm which is similiar to the OrderedSingleMostLeecherDistributionAlgorithm, but requests single chunks instead of complete data sets and does download from any seeder the leecher is connected with in parallel, if this is possible. 
 
-\subsubsection{Algorithm: SuperSeederChunkedSwarm}
-\label{subsubsec:superseederchunkedswarm}
+To effectively download from as many seeders as possible, all seeders are sorted by the number of chunks they offer minus the chunks, which are currently being downloaded by the leecher and those, which are already downloaded. This way the leecher always chooses the best combination of downloads. If there are multiple chunks per seeder, which are equally well suited for downloading, the algorithm picks one chunk randomly. In consequence of this, chunk duplication cannot be prevented, though minimized if a high chunk count is choosen. Although, the efficiency of this model was determined with perfect chunk selection in mind. 
+
+Since random chunk selection cannot always be perfect, an additional SeederDistributionAlgorithm can be choosen, which is called the SuperSeederDistributionAlgorithm. It is basically a DefaultSeederDistributionAlgorithm which remembers all chunks it has already uploaded and rejects any further attempts to download those chunks. This way chunk duplication cannot occur, because leechers, whose download requests are rejected, simply request another chunk and download the rejected chunk later. The method guarantees that every leecher requests a distinct chunk from the seeder, which has the data set completely at the beginning. The other seeders still use the DefaultSeederDistributionAlgorithm. The problem is, that this technique is not safe against peer loss, which means that chunks uploaded to a peer, which goes offline, are not retransferred by the super seeder. This relates to future work and can be solved by periodic checks.
 
 \cleardoublepage
 \section{Module: Monitoring}

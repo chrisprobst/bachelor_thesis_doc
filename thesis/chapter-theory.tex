@@ -1,23 +1,24 @@
 \chapter{Theory}
 \label{ch:theory}
 
-\section{Model: Client/Server}
-In the client/server model, as shown in figure \ref{fig:clientservermodel}, every client is only connected to the server. The server transfers data sets to all clients in parallel and thus all clients share the upload bandwidth of the server. This concept does not scale well, because every new client connecting to the system slows down every other client connected to the same server. 
+\section{Model: Sequential}
+\label{sec:sequentialmodel}
+In the sequential (client/server) model, as shown in figure \ref{fig:sequentialmodel}, every client is only connected to the server. The server transfers data sets to all clients in parallel and thus all clients share the upload bandwidth of the server. This concept does not scale well, because every new client connecting to the system slows down every other client connected to the same server. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=6cm]{clientservermodel}
-\caption{Client/Server distribution}
-\label{fig:clientservermodel}
+\includegraphics[width=6cm]{sequentialmodel}
+\caption{Sequential distribution}
+\label{fig:sequentialmodel}
 \end{figure}
 
-If $b$ is the bandwidth of the server in bytes/second, $n$ the number of clients connected to the server and $s$ the size of the whole data set, then $T= n \cdot T_0$ is the time in seconds it would take to transfer the data set to all clients, where $T_0=\frac{s}{b}$ is the time in seconds for a single tranfser from the server to a client. This formula assumes, that the download bandwidth of each client is bigger than the shared upload bandwidth. Without adding servers or using the upload bandwidth of the clients this linear relationship cannot be removed. This traditional model is implemented in the Sequential algorithm, which can be found in section \ref{subsubsec:sequential}.
+If $b$ is the bandwidth of the server in bytes/second, $n$ the number of clients connected to the server and $s$ the size of the whole data set, then $T= n \cdot T_0$ is the time in seconds it would take to transfer the data set to all clients, where $T_0=\frac{s}{b}$ is the time in seconds for a single tranfser from the server to a client. This formula assumes, that the download bandwidth of each client is bigger than the shared upload bandwidth. Without adding servers or using the upload bandwidth of the clients this linear relationship cannot be removed. This traditional model is implemented in the Sequential algorithm, which can be found in section \ref{subsubsec:seqlog}.
 
-From the very first beginning it was clear, that this model is not able to keep the limit of $2 \cdot T_0$ seconds but it is implemented to show the immense difference. The next section \ref{subsubsec:logarithmicmodel} presents a much better model.
+From the very first beginning it was clear, that this model is not able to keep the limit of $2 \cdot T_0$ seconds but it is implemented to show the immense difference. The next section \ref{sec:logarithmicmodel} presents a much better model.
 
 \pagebreak
 \section{Model: Logarithmic}
-\label{subsubsec:logarithmicmodel}
+\label{sec:logarithmicmodel}
 If a P2P network is used instead of a client/server model, where every participant is called a peer and has a connection to one or more other peers in the network. The number of connections depends on the used topology. In this thesis only the mesh topology is of importance, as shown in figure \ref{fig:peermesh}, where every peer is connected to every other peer in the network.
 
 \begin{figure}[H]
@@ -38,13 +39,13 @@ At first, this concept might seem even worse than the client/server model, but i
 \label{fig:logarithmicmodel}
 \end{figure}
 
-The implementation of this model increases the complexity only marginal, but the efficiency is significantly higher. The more peers there are participating the higher is the efficiency. The overhead is also very manageable because during the transfers the idle peers do nothing except waiting. The problem of this model is that never more than 50\% of all peers are uploading in parallel. Also at the beginning only one peer uploads the data set. This means that in the beginning a majority of all peers do not use their upload bandwidth. This model is implemented in the Logarithmic algorithm, which can be found in section \ref{subsubsec:logarithmic}.
+The implementation of this model increases the complexity only marginal, but the efficiency is significantly higher. The more peers there are participating the higher is the efficiency. The overhead is also very manageable because during the transfers the idle peers do nothing except waiting. The problem of this model is that never more than 50\% of all peers are uploading in parallel. Also at the beginning only one peer uploads the data set. This means that in the beginning a majority of all peers do not use their upload bandwidth. This model is implemented in the Logarithmic algorithm, which can be found in section \ref{subsubsec:seqlog}.
 
-At the end this model cannot provide the $2 \cdot T_0$ limit we are looking for. To do so this model has to be improved, which is done in the next section \ref{subsubsec:chunkedswarmmodel}.
+At the end this model cannot provide the $2 \cdot T_0$ limit we are looking for. To do so this model has to be improved, which is done in the next section \ref{sec:chunkedswarmmodel}.
 
 
 \section{Model: Chunked-Swarm}
-\label{subsubsec:chunkedswarmmodel}
+\label{sec:chunkedswarmmodel}
 The Chunked-Swarm model is an enhancement of the logarithmic model. It allows multiple uploads in parallel and splits the data set into chunks before transferring it. So peers cannot download the whole data set at once, but have to request each chunk individually instead. Since the size of those chunks is smaller than the size of the whole data set, the peers can help to distribute the data set more quickly. The figure \ref{fig:chunkedswarmmodel} shows 4 peers distributing 3 chunks. At first peer 1 has the data set completely. Peer 2, 3 and 4 each request one chunk in parallel. Those peers will then distribute their chunks among themselves. This means that those peers announce their own chunks to the other peers, which can then request those chunks. It is important to note, that this model is always pull-based. A chunk is only uploaded if a peer explicitly requests it.
 
 \begin{figure}[H]
@@ -54,7 +55,7 @@ The Chunked-Swarm model is an enhancement of the logarithmic model. It allows mu
 \label{fig:chunkedswarmmodel}
 \end{figure}
 
-The implementation of this model is not as easy as the logarithmic one, because the efficiency totally depends on the choice of the chunks the peer 2, 3 and 4 request from peer 1. Since this approach is pull-based, the peers do not know what the other peers request. This could lead to chunk duplication which decreases the efficiency considerably. Chunk duplication means that two peers request the same chunk from peer 1 and therefore cannot exchange those chunks afterwards. An implementation of this model has to make strong considerations about this issue. This model is implemented in the ChunkedSwarm and the SuperSeederChunkedSwarm algorithm, which can be found in section \ref{subsubsec:chunkedswarm} and \ref{subsubsec:superseederchunkedswarm} respectively. Those sections also explain the problem of chunk selection in more detail.
+The implementation of this model is not as easy as the logarithmic one, because the efficiency totally depends on the choice of the chunks the peer 2, 3 and 4 request from peer 1. Since this approach is pull-based, the peers do not know what the other peers request. This could lead to chunk duplication which decreases the efficiency considerably. Chunk duplication means that two peers request the same chunk from peer 1 and therefore cannot exchange those chunks afterwards. An implementation of this model has to make strong considerations about this issue. The implementation of this model is described in section \ref{subsubsec:chunkedswarm}. This section also explains the problem of chunk selection in more detail.
 
 To determine the efficiency of this model, it is assumed, that the chunk selection works perfectly, which means that all peers request distinct chunks from peer 1. This also implies that there have to be at least as many chunks as there are peers. Less chunks would also work, but then chunk duplication cannot be prevented.
 
@@ -78,7 +79,7 @@ This means that after $T = T_0 + \frac{2}{3} \cdot T_0 = \frac{5}{3} \cdot T_0$ 
 
 After $\frac{1}{2} \cdot T_0$ seconds the peers received the first three distinct chunks from peer 1. At this point the peers can exchange their chunks, which takes $\frac{1}{2} \cdot \frac{2}{3} \cdot T_0$ seconds. After $\frac{5}{6} \cdot T_0$ seconds all peers have the first 50\% of the data set. At $T_0$ seconds the last three distinct chunks arrive which will also be exchanged afterwards. So after $T = T_0 + \frac{1}{2} \cdot \frac{2}{3} \cdot T_0 = \frac{4}{3} \cdot T_0$ seconds all peers have the data set. The general formula is $T(n, c) = T_0 + \frac{n}{c} \cdot \frac{n-1}{n} \cdot T_0 =  T_0 + \frac{n-1}{c} \cdot T_0$, where $c = n \cdot 2^i, i \in \mathbb{N}$ is the chunk count.
 
-Using this relationship the time $T(n, c) = T_0 + \frac{n-1}{c} \cdot T_0$ can almost be minized to $T_0$ if $c >> n$.
+Using this relationship the time $T(n, c) = T_0 + \frac{n-1}{c} \cdot T_0$ can almost be minized to $T_0$ if $c >> n$. A major disadvantage is that the chunk count has to be choosen before the transfer can actually happen. Since the efficiency depends on the $\frac{n-1}{c}$ ratio, the maximal number of peers should be determined before. Chapter \ref{sec:streaming} and \ref{ch:futurework} explains in more detail how to use model to implement incremental data set transfers like video or audio streaming.
 
 
 

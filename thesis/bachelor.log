@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.19)  2 OCT 2014 13:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.19)  2 OCT 2014 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -805,7 +805,7 @@ LaTeX Info: Redefining \nameref on input line 62.
 \openout2 = `bachelor-titlepage.aux'.
 
  (./bachelor-titlepage.tex
-<fig/unilogo.pdf, id=180, 809.0225pt x 467.7475pt>
+<fig/unilogo.pdf, id=172, 809.0225pt x 467.7475pt>
 File: fig/unilogo.pdf Graphic file (type pdf)
  <use fig/unilogo.pdf>
 Package pdftex.def Info: fig/unilogo.pdf used on input line 5.
@@ -823,7 +823,43 @@ nilogo.pdf>]) [2
 
 
 
-] (./chapter-abstract.tex)
+] (./chapter-abstract.tex
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 7.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 7.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 7.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 7.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 7.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+)
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
@@ -853,43 +889,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 19.08076pt on input line 82.
 
-(./bachelor.toc
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 5.
-
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 5.
-
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 5.
-
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 5.
-
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 5.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
- [7
+(./bachelor.toc [7
 
 
 ])
@@ -959,29 +959,27 @@ Chapter 2.
 
 ] (./chapter-theory.tex
 Chapter 3.
-Package epstopdf Info: Source file: <fig/clientservermodel.eps>
+Package epstopdf Info: Source file: <fig/sequentialmodel.eps>
 (epstopdf)                    date: 2014-10-01 19:55:31
 (epstopdf)                    size: 14718 bytes
-(epstopdf)             Output file: <fig/clientservermodel-eps-converted-to.pdf
->
-(epstopdf)                    date: 2014-10-01 19:55:38
+(epstopdf)             Output file: <fig/sequentialmodel-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-02 15:16:20
 (epstopdf)                    size: 9276 bytes
-(epstopdf)             Command: <repstopdf --outfile=fig/clientservermodel-eps-
-converted-to.pdf fig/clientservermodel.eps>
-(epstopdf)             \includegraphics on input line 9.
+(epstopdf)             Command: <repstopdf --outfile=fig/sequentialmodel-eps-co
+nverted-to.pdf fig/sequentialmodel.eps>
+(epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
+<fig/sequentialmodel-eps-converted-to.pdf, id=322, 227.85126pt x 85.31876pt>
+File: fig/sequentialmodel-eps-converted-to.pdf Graphic file (type pdf)
 
-<fig/clientservermodel-eps-converted-to.pdf, id=332, 227.85126pt x 85.31876pt>
-File: fig/clientservermodel-eps-converted-to.pdf Graphic file (type pdf)
-
-<use fig/clientservermodel-eps-converted-to.pdf>
-Package pdftex.def Info: fig/clientservermodel-eps-converted-to.pdf used on inp
-ut line 9.
+<use fig/sequentialmodel-eps-converted-to.pdf>
+Package pdftex.def Info: fig/sequentialmodel-eps-converted-to.pdf used on input
+ line 10.
 (pdftex.def)             Requested size: 170.71652pt x 63.92639pt.
  [5
 
 
- <./fig/clientservermodel-eps-converted-to.pdf>]
+ <./fig/sequentialmodel-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig/peermesh.eps>
 (epstopdf)                    date: 2014-09-30 14:53:59
 (epstopdf)                    size: 13537 bytes
@@ -990,15 +988,15 @@ Package epstopdf Info: Source file: <fig/peermesh.eps>
 (epstopdf)                    size: 8599 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/peermesh-eps-converted
 -to.pdf fig/peermesh.eps>
-(epstopdf)             \includegraphics on input line 25.
+(epstopdf)             \includegraphics on input line 26.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/peermesh-eps-converted-to.pdf, id=343, 170.6375pt x 142.5325pt>
+<fig/peermesh-eps-converted-to.pdf, id=333, 170.6375pt x 142.5325pt>
 File: fig/peermesh-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/peermesh-eps-converted-to.pdf>
 Package pdftex.def Info: fig/peermesh-eps-converted-to.pdf used on input line 2
-5.
+6.
 (pdftex.def)             Requested size: 170.71652pt x 142.60825pt.
 Package epstopdf Info: Source file: <fig/logarithmicmodel.eps>
 (epstopdf)                    date: 2014-09-30 15:43:56
@@ -1009,15 +1007,15 @@ Package epstopdf Info: Source file: <fig/logarithmicmodel.eps>
 (epstopdf)                    size: 9337 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/logarithmicmodel-eps-c
 onverted-to.pdf fig/logarithmicmodel.eps>
-(epstopdf)             \includegraphics on input line 36.
+(epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/logarithmicmodel-eps-converted-to.pdf, id=345, 227.85126pt x 113.42375pt>
+<fig/logarithmicmodel-eps-converted-to.pdf, id=335, 227.85126pt x 113.42375pt>
 File: fig/logarithmicmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/logarithmicmodel-eps-converted-to.pdf>
 Package pdftex.def Info: fig/logarithmicmodel-eps-converted-to.pdf used on inpu
-t line 36.
+t line 37.
 (pdftex.def)             Requested size: 170.71652pt x 84.98451pt.
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
@@ -1033,15 +1031,15 @@ Package epstopdf Info: Source file: <fig/chunkedswarmmodel.eps>
 (epstopdf)                    size: 24378 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/chunkedswarmmodel-eps-
 converted-to.pdf fig/chunkedswarmmodel.eps>
-(epstopdf)             \includegraphics on input line 52.
+(epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/chunkedswarmmodel-eps-converted-to.pdf, id=355, 230.8625pt x 142.5325pt>
+<fig/chunkedswarmmodel-eps-converted-to.pdf, id=345, 230.8625pt x 142.5325pt>
 File: fig/chunkedswarmmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/chunkedswarmmodel-eps-converted-to.pdf>
 Package pdftex.def Info: fig/chunkedswarmmodel-eps-converted-to.pdf used on inp
-ut line 52.
+ut line 53.
 (pdftex.def)             Requested size: 170.71652pt x 105.39844pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1060,15 +1058,15 @@ pdf>
 (epstopdf)                    size: 19606 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/chunkedswarmformula1-e
 ps-converted-to.pdf fig/chunkedswarmformula1.eps>
-(epstopdf)             \includegraphics on input line 65.
+(epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/chunkedswarmformula1-eps-converted-to.pdf, id=366, 468.75125pt x 146.5475p
+<fig/chunkedswarmformula1-eps-converted-to.pdf, id=355, 468.75125pt x 146.5475p
 t>
 File: fig/chunkedswarmformula1-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/chunkedswarmformula1-eps-converted-to.pdf>
 Package pdftex.def Info: fig/chunkedswarmformula1-eps-converted-to.pdf used on 
-input line 65.
+input line 66.
 (pdftex.def)             Requested size: 341.43306pt x 106.74173pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1088,15 +1086,15 @@ pdf>
 (epstopdf)                    size: 40524 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/chunkedswarmformula2-e
 ps-converted-to.pdf fig/chunkedswarmformula2.eps>
-(epstopdf)             \includegraphics on input line 74.
+(epstopdf)             \includegraphics on input line 75.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/chunkedswarmformula2-eps-converted-to.pdf, id=376, 489.83pt x 212.795pt>
+<fig/chunkedswarmformula2-eps-converted-to.pdf, id=365, 489.83pt x 212.795pt>
 File: fig/chunkedswarmformula2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/chunkedswarmformula2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/chunkedswarmformula2-eps-converted-to.pdf used on 
-input line 74.
+input line 75.
 (pdftex.def)             Requested size: 341.43306pt x 148.33205pt.
 )
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
@@ -1118,7 +1116,7 @@ Package epstopdf Info: Source file: <fig/arch.eps>
 pdf fig/arch.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
-<fig/arch-eps-converted-to.pdf, id=390, 507.8975pt x 415.5525pt>
+<fig/arch-eps-converted-to.pdf, id=381, 507.8975pt x 415.5525pt>
 File: fig/arch-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/arch-eps-converted-to.pdf>
@@ -1155,7 +1153,7 @@ Package epstopdf Info: Source file: <fig/autoconnect.eps>
 ted-to.pdf fig/autoconnect.eps>
 (epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
- <fig/autoconnect-eps-converted-to.pdf, id=419, 378.41376pt x 262.9825pt>
+ <fig/autoconnect-eps-converted-to.pdf, id=410, 378.41376pt x 262.9825pt>
 File: fig/autoconnect-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/autoconnect-eps-converted-to.pdf>
@@ -1173,7 +1171,7 @@ pdf fig/mesh.eps>
 (epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/mesh-eps-converted-to.pdf, id=422, 170.6375pt x 85.31876pt>
+<fig/mesh-eps-converted-to.pdf, id=413, 170.6375pt x 85.31876pt>
 File: fig/mesh-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/mesh-eps-converted-to.pdf>
@@ -1194,7 +1192,7 @@ Package epstopdf Info: Source file: <fig/reconnect.eps>
 d-to.pdf fig/reconnect.eps>
 (epstopdf)             \includegraphics on input line 41.
 Package epstopdf Info: Output file is already uptodate.
-<fig/reconnect-eps-converted-to.pdf, id=434, 370.38374pt x 242.9075pt>
+<fig/reconnect-eps-converted-to.pdf, id=425, 370.38374pt x 242.9075pt>
 File: fig/reconnect-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/reconnect-eps-converted-to.pdf>
@@ -1275,14 +1273,18 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 [23
 
 
-] [24
-
-
-])
+]
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[25] [26
+[24])
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[25
+
+
+] [26
 
 
 ] (./chapter-app-modules.tex
@@ -1437,17 +1439,17 @@ bachelor.out
 bachelor-titlepage.tex
 fig/unilogo.pdf
 chapter-abstract.tex
-chapter-acknowledgements.tex
-   t1phv.fd    2001/06/04 scalable font definitions for T1/phv.
 ot1ztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 omlztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 omsztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 omxztmcm.fd    2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
   ot1ptm.fd    2001/06/04 font definitions for OT1/ptm.
+chapter-acknowledgements.tex
+   t1phv.fd    2001/06/04 scalable font definitions for T1/phv.
 chapter-intro.tex
 chapter-related-work.tex
 chapter-theory.tex
-fig/clientservermodel-eps-converted-to.pdf
+fig/sequentialmodel-eps-converted-to.pdf
 fig/peermesh-eps-converted-to.pdf
 fig/logarithmicmodel-eps-converted-to.pdf
 fig/chunkedswarmmodel-eps-converted-to.pdf
@@ -1471,14 +1473,14 @@ bachelor-cd.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `bachelor.out' has not changed.
-(rerunfilecheck)             Checksum: 0C9678AA3FA027ED00ED31AA0E4FAEF0;3048.
+(rerunfilecheck)             Checksum: 51745685820ED4B99BFE597FB5F86A12;2851.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 9959 strings out of 493117
- 150326 string characters out of 6135433
- 280168 words of memory out of 5000000
- 13024 multiletter control sequences out of 15000+600000
+ 9954 strings out of 493117
+ 150171 string characters out of 6135433
+ 280085 words of memory out of 5000000
+ 13021 multiletter control sequences out of 15000+600000
  56506 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,59p,1075b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1493,10 +1495,10 @@ mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on bachelor.pdf (49 pages, 489325 bytes).
+Output written on bachelor.pdf (49 pages, 491231 bytes).
 PDF statistics:
- 610 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 107 named destinations out of 1000 (max. 500000)
- 408 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 603 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 392 words of extra memory for PDF output out of 10000 (max. 10000000)
 
