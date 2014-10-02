@@ -4,7 +4,7 @@
 \section{Module: Core-Framework}
 \label{sec:core}
 \subsection{Network}
-The network implementation has the concept of leechers and seeders. A leecher connects to one or more seeders and requests chunks from them. A seeder has multiple leechers connected to it and answers to chunk requests. Every chunk transfer is pull-based, which means it can only be requested by the leecher while every non-chunk transfer like Meta-Data or address announcements is always push-based, which means that a seeder transfers them without being asked to do so. This has the advantage that every leecher knows exactly what a seeder has to offer without asking but only requests the chunks it needs. See section \ref{subsubsec:downloadreq} for more information.
+The network implementation has the concept of leechers and seeders. A leecher connects to one or more seeders and requests chunks from them. A seeder has multiple leechers connected to it and answers to chunk requests. Every chunk transfer is pull-based, which means it can only be requested by the leecher while every non-chunk transfer like Meta-Data or address announcements is always push-based, which means that a leecher or seeder transfers them without being asked to do so. This has the advantage that every leecher knows exactly what a seeder has to offer without asking, but only requests the chunks it needs. See section \ref{subsubsec:downloadreq} for more information.
 
 While leechers and seeders are independent of each other it is possible to couple them together. A leecher coupled with a seeder always announces the address of its seeder to any other seeder it is connected with. This concept is explained in more detail in section \ref{subsubsec:autoconnect}.
 
@@ -23,7 +23,7 @@ While every leecher has to manually connect to a seeder for the first time, afte
 \label{fig:autoconnect}
 \end{figure}
 
-Here leecher 1, 2 and 3 announce the address of seeder 1, 2 and 3 respectively to seeder 4 which then broadcasts those addresses to all connected leechers. This way the leechers get to know each other and can connect to the remaining seeders. Though in figure \ref{fig:autoconnect} only leecher 2 is illustrated, leecher 1 and 3 connect to the other seeders as well. Of course, this works recursively, so if one of the seeders 1, 2 or 3 already has other leechers connected to it those will also be found. So in the end the topology is just a mesh with $(n-1)*n$ connections where $n$ refers to the total number of coupled seeders and leechers and every leecher of each couple is connected to every seeder of all other couples. The figure \ref{fig:mesh} shows this from the point of view of leecher 1, which is connected to seeder 2, 3 and 4.
+Here leecher 1, 2 and 3 announce the address of seeder 1, 2 and 3 respectively to seeder 4 which then broadcasts those addresses to all connected leechers. This way the leechers get to know each other and can connect to the remaining seeders. Though in figure \ref{fig:autoconnect} only leecher 2 is illustrated, leecher 1 and 3 connect to the other seeders as well. Of course, this works recursively, so if one of the seeders 1, 2 or 3 already has other leechers connected to it those will also be found. So in the end the topology is just a mesh with $(n-1)*n$ connections where $n$ refers to the total number of coupled seeders and leechers and every leecher of each couple is connected to every seeder of all other couples. The figure \ref{fig:mesh} shows this from the point of view of leecher 2, which is connected to seeder 1, 3 and 4.
 
 \begin{figure}[H]
 \centering
@@ -54,7 +54,7 @@ As an optimization the seeder only transfers new Meta-Data. So if a data set doe
 \label{subsubsec:downloadreq}
 After a leecher successfully connected to one or more seeders and already received Meta-Data announcements it can start to request chunks from the seeders. What to request from whom heavily depends on the used distribution algorithm, which is explained in section \ref{sec:algorithm} in more detail. 
 
-Since downloading more than one chunk at a time from a seeder is not faster than downloading them sequentially only one download at a time is allowed which also reduces protocol complexity. Because of that Meta-Data and address announcements are also not transferred during a chunk download because those announcements are then obviously of no interest for the leecher. As soon as the chunk download completes outstanding announcements are bundled and transferred.
+Since downloading more than one chunk at a time from one seeder is not faster than downloading them sequentially only one download per seeder at a time is allowed, which also reduces protocol complexity. Because of that Meta-Data and address announcements are also not transferred during a chunk download because those announcements are then obviously of no interest for the leecher. As soon as the chunk download completes outstanding announcements are bundled and transferred.
 
 A seeder is allowed to decide whether or not a chunk request is valid, which means that depending on the algorithm the seeder can reject a chunk request. If a seeder rejects a chunk request the leecher do not request the same chunk again. The seeder can tell the leecher that a previously rejected chunk request is valid again by reannouncing the specific chunk. This way complex distribution behaviour can easily be implemented.
 
@@ -76,7 +76,7 @@ Netty also offers usual transport protocols like TCP. It is used as secondary op
 \subsubsection{Traffic-Shaping}
 To simulate and evaluate network applications you need the ability to control the bandwidth in some way to have comparable network conditions. The problem with bandwidth limitation, which is also called traffic-shaping, is that most times you cannot throttle the writer. The writer can either be writing as fast as possible or not writing at all. So in order to limit the bandwidth you have to start and stop the writer periodically. Because readers and writers are identical in terms of bandwidth limitation the explanation always refers to writers but the same approach works for readers equally well .
 
-If the period is too long the introduced bandwidth peaks can affect the measurements in a negative way but if the period is too short instead, you introduce a lot of overhead. To perfectly limit the bandwidth you would need to use a period which is indefinitely short. So if you want to implement traffic-shaping reliably, you must find the sweet spot between accuracy and minimal overhead. The network implementation uses a period of 250 ms which is good enough because the measurements are done every second. So every measurement contains the average of approximately 4 bandwidth limitation runs.
+If the limitation period is too long the introduced bandwidth peaks can affect the measurements in a negative way but if the period is too short instead, you introduce too much overhead. To perfectly limit the bandwidth you would need to use a period which is indefinitely short. So if you want to implement traffic-shaping reliably, you must find the sweet spot between accuracy and minimal overhead. The network implementation uses a period of 250 ms which is good enough because the measurements are done every second. So every measurement contains the average of approximately 4 bandwidth limitation runs.
 
 The complexity increases if multiple writers together are not allowed to exceed a given bandwidth. The main problem is fairness. You do not want that one writer gets 95\% of the bandwidth while the remaining writes get only 5\% together. But at the same time you want that a single writer is able to write at full speed if no other writer is writing. This complex behaviour can be achieved using a Leaky-Bucket algorithm and a Priority-Queue.
 
@@ -99,24 +99,22 @@ Those Event-Loops can then run theoretically in parallel, because the underlying
 
 \subsubsection{Lock-Free-Progamming}
 \label{subsecsec:lockfree}
-The main problem when using multiple threads is the question of how those threads interact which each other. If two threads access the same variable without any protection the resulting behaviour is not always defined and can lead to untraceable bugs. The unprotected access of variables is called a critical-section.
+The main problem when using multiple threads is the question of how those threads interact which each other. If two threads access the same variable without any protection the resulting behaviour is not always defined and can lead to untraceable bugs. The unprotected access of variables is called a race-condition or critical-section.
 
 A simple solution is to protect those sections with a mutually exclusive (mutex) lock, which simply forbids that more than one thread is entering the critical-section at a time, but this decreases efficiency and increase thread context switching, which is expensive. One solution is to use lock-free algorithms, which exploit certain guarantees made by the Java Memory-Model. To explain those concepts in detail would arguably exceed the boundries of this thesis, but it should be noted that the network implemention heavily uses those algorithms.
 
-The reason why those concepts were considered is that inter-thread-communication was a key design choice in order to simplify the architecture of the implementation. For instance a leecher can be connected to a lot of seeders receiving a lot of Meta-Data and address announcements. In order to effectively request chunks from the seeders the leecher has to collect the information from all connections which may run in different threads and thus are not protected against concurrent access by default. Since this collection is a very common task it should be optimized as well. Using CAS and volatile operations the necessary mutexes can be reduced to a minimum. 
+The reason why those concepts were considered is that inter-thread-communication was a key design choice in order to simplify the architecture of the implementation. For instance a leecher can be connected to a lot of seeders receiving a lot of Meta-Data and address announcements. In order to effectively request chunks from the seeders the leecher has to collect the information from all connections which may run in different Event-Loop threads and thus are not protected against concurrent access by default. Since this collection is a very common task it should be optimized as well. Using CAS and volatile operations the necessary mutexes can be reduced to a minimum. 
 
-In normal situations the overhead of mutexes can be ignored, but when simulating hundreds of leechers and seeders on multiple cores this means a lot of cross thread access. If every collection of Meta-Data of each leecher would stop all Event-Loop threads by using a mutex the overhead should start to be noticeable. Those impacts are hard to measure or quantify, though. But in principle the lock-free approach scales better. As a rule of thumb lock-free-algorithms should always be preferred in performance critical sections.
+In normal situations the overhead of mutexes can be ignored, but when simulating hundreds of leechers and seeders on multiple cores this means a lot of cross thread access. If every collection of Meta-Data of each leecher would stop all Event-Loop threads by using a mutex the overhead should start to be noticeable. Those impacts are hard to measure or quantify, though. But in principle the lock-free approach scales better. As a rule of thumb lock-free-algorithms should always be preferred in performance critical sections. They can also help to prevent dead-locks, which happen when two threads are waiting for resources locked by each other, and thus both wait forever.
 
 \cleardoublepage
 \section{Module: DataBase}
 \label{sec:database}
-The DataBase module represents a generic interface for storing binary data in any kind of storage. While the Core-Framework transfers data between peers the data has to be read from and written to some kind of database. The data managed by the database is not just plain data but chunked data instead. Because of that a database stores so called data sets which consist of multiple chunks. 
-
-The database has the responsibility to verify stored chunks in terms of consistency and validation. But to do so the storage has to know about the structure of the data set. Because of that the Meta-Data which describes a given data set is stored together with the data set as key-value pairs. The next section \ref{subsubsec:metadata} describes the Meta-Data format in more detail.
+The DataBase module represents a generic interface for storing binary data sets as chunks in any kind of storage. It has the responsibility to verify written chunks in terms of consistency and validation. But to do so the storage has to know about the structure of the data set. Because of that the Meta-Data, which describes a given data set, is stored together with the data set as key-value pairs. The next section \ref{subsubsec:metadata} describes the Meta-Data format in more detail.
 
 \subsubsection{Meta-Data}
 \label{subsubsec:metadata}
-The Meta-Data contains information about a given data set. Those information are transferred between seeders and leechers to describe what data sets are avaiable for download. Those information are:
+The Meta-Data contains information about a given data set. Those information are transferred between seeders and leechers to describe what data sets are available, and thus which chunks can be requested. Those information are:
 \begin{itemize} 
 \setlength{\parskip}{1pt}
 \item Name
@@ -132,9 +130,7 @@ The Name and Description fields are used for human-related tasks. The ID has to 
 \subsubsection{Backends: In-Memory and Filesystem}
 The In-Memory backend stores data sets in main memory and is not persistent. It is a useful backend for situations where you generate or consume data sets on the fly like video streaming or test scenarios.
 
-In case of streaming you could simply add fake data set sources which loads chunks from a live camera or similiar devices.
-
-The Benchmark module uses this backend to reduce overhead introduced by the filesystem. This backend almost has no overhead other than memory usage.
+In case of streaming you could simply add data set sources which loads chunks from a live camera or similiar devices. The Benchmark module uses this backend to reduce overhead introduced by the filesystem. This backend almost has no overhead other than memory usage.
 
 Related to future work is the filesystem backend which implements a persistent database based on a filesystem. The filesystem can also be virtual like a ZIP file. This backend is more rigid but also very important for file-sharing applications.
 

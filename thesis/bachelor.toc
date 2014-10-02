@@ -8,8 +8,8 @@
 \contentsline {chapter}{\numberline {2}Related work}{3}{chapter.2}
 \contentsline {chapter}{\numberline {3}Theory}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Model: Client/Server}{5}{section.3.1}
-\contentsline {section}{\numberline {3.2}Model: Logarithmic}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Model: Chunked-Swarm}{8}{section.3.3}
+\contentsline {section}{\numberline {3.2}Model: Logarithmic}{6}{section.3.2}
+\contentsline {section}{\numberline {3.3}Model: Chunked-Swarm}{7}{section.3.3}
 \contentsline {chapter}{\numberline {4}Architecture}{11}{chapter.4}
 \contentsline {chapter}{\numberline {5}Framework Modules}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}Module: Core-Framework}{13}{section.5.1}
@@ -25,7 +25,7 @@
 \contentsline {subsubsection}{\numberline {5.1.2.2}Lock-Free-Progamming}{19}{subsubsection.5.1.2.2}
 \contentsline {section}{\numberline {5.2}Module: DataBase}{21}{section.5.2}
 \contentsline {subsubsection}{\numberline {5.2.0.3}Meta-Data}{21}{subsubsection.5.2.0.3}
-\contentsline {subsubsection}{\numberline {5.2.0.4}Backends: In-Memory and Filesystem}{22}{subsubsection.5.2.0.4}
+\contentsline {subsubsection}{\numberline {5.2.0.4}Backends: In-Memory and Filesystem}{21}{subsubsection.5.2.0.4}
 \contentsline {section}{\numberline {5.3}Module: Algorithm}{23}{section.5.3}
 \contentsline {subsubsection}{\numberline {5.3.0.5}Algorithm: Sequential}{23}{subsubsection.5.3.0.5}
 \contentsline {subsubsection}{\numberline {5.3.0.6}Algorithm: Logarithmic}{23}{subsubsection.5.3.0.6}
