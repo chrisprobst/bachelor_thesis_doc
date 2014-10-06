@@ -8,9 +8,9 @@ In case of real-time video streaming, a server should guarantee, that the abilit
 To improve this unbalance the clients could use their own upload capacity to help the server distributing a given data set. Those networks are P2P networks where every participant is called a peer and is connected to other peers in the network. If all peers have enough upload bandwidth, it is possible to create a P2P network, which is able to distribute a given data set evenly among all peers in a fixed time relative to the number of participating peers.
 
 \section{Objective}
-This thesis concentrates on implementing a P2P network, which is able to distribute a given data set among any number of clients and never exceeds $2 \cdot T_0$ where $T_0$ is the time needed for a single transfer between the server and a client measured in seconds.
+This thesis concentrates on implementing a P2P software, which is able to distribute a given data set among any number of clients and never exceeds $2 \cdot T_0$ where $T_0$ is the time needed for a single transfer between the server and a client measured in seconds.
 
-To reach this goal different distribution algorithms are implemented and evaluated to compare advantages and disadvantages. The resulting software is able to measure those algorithms in terms of efficiency, overhead and performance.
+To reach this goal different distribution algorithms are implemented and evaluated to compare advantages and disadvantages. The resulting software is able to evaluate those algorithms in terms of efficiency, overhead and performance.
 
 The solution is generic and can be used for any kind of data transfers like video streaming or large file transfers.
 

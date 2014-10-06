@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.19)  2 OCT 2014 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.19)  6 OCT 2014 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -976,6 +976,9 @@ File: fig/sequentialmodel-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig/sequentialmodel-eps-converted-to.pdf used on input
  line 10.
 (pdftex.def)             Requested size: 170.71652pt x 63.92639pt.
+
+Underfull \vbox (badness 1275) has occurred while \output is active []
+
  [5
 
 
@@ -1096,15 +1099,15 @@ File: fig/chunkedswarmformula2-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig/chunkedswarmformula2-eps-converted-to.pdf used on 
 input line 75.
 (pdftex.def)             Requested size: 341.43306pt x 148.33205pt.
-)
+
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[9 <./fig/chunkedswarmformula2-eps-converted-to.pdf>] [10
+[9 <./fig/chunkedswarmformula2-eps-converted-to.pdf>])
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-]
-(./chapter-architecture.tex
+[10] (./chapter-architecture.tex
 Chapter 4.
 Package epstopdf Info: Source file: <fig/arch.eps>
 (epstopdf)                    date: 2014-09-28 13:19:06
@@ -1123,6 +1126,8 @@ File: fig/arch-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig/arch-eps-converted-to.pdf used on input line 10.
 (pdftex.def)             Requested size: 341.43306pt x 279.36351pt.
  [11
+
+
 
 
  <./fig/arch-eps-converted-to.pdf>])
@@ -1204,7 +1209,7 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [15 <./fig/reconnect-eps-converted-to.pdf>]
-Underfull \vbox (badness 7238) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
@@ -1277,38 +1282,42 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[24])
+[24]
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[25
+[25] [26
 
 
-] [26
+])
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[27] [28
 
 
 ] (./chapter-app-modules.tex
 Chapter 6.
-) [27
-
-
-] [28
-
-
-] (./chapter-evaluation.tex
-Chapter 7.
 ) [29
 
 
 ] [30
 
 
-] (./chapter-futurework.tex
-Chapter 8.
+] (./chapter-evaluation.tex
+Chapter 7.
 ) [31
 
 
 ] [32
+
+
+] (./chapter-futurework.tex
+Chapter 8.
+) [33
+
+
+] [34
 
 
 ] (./bachelor.bbl
@@ -1316,17 +1325,17 @@ Chapter 8.
 LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
                before end of `thebibliography' environment on input line 10.
 
-) [33
+) [35
 
 
 ]
 \openout2 = `bachelor-declaration.aux'.
 
- (./bachelor-declaration.tex [34
+ (./bachelor-declaration.tex [36
 
 
 
-]) [35] [36
+]) [37] [38
 
 
 
@@ -1335,7 +1344,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
- [37
+ [39
 
 
 ]
@@ -1477,8 +1486,8 @@ Package rerunfilecheck Info: File `bachelor.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 9954 strings out of 493117
- 150171 string characters out of 6135433
+ 9956 strings out of 493117
+ 150185 string characters out of 6135433
  280085 words of memory out of 5000000
  13021 multiletter control sequences out of 15000+600000
  56506 words of font info for 81 fonts, out of 8000000 for 9000
@@ -1495,10 +1504,10 @@ mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on bachelor.pdf (49 pages, 491231 bytes).
+Output written on bachelor.pdf (51 pages, 494305 bytes).
 PDF statistics:
- 603 PDF objects out of 1000 (max. 8388607)
- 524 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 612 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
+ 107 named destinations out of 1000 (max. 500000)
  392 words of extra memory for PDF output out of 10000 (max. 10000000)
 
