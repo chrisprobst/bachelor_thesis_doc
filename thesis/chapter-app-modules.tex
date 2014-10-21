@@ -4,7 +4,97 @@
 \section{Module: Benchmark}
 \label{sec:benchmark}
 
-The Benchmark module 
+The Benchmark module consists of an command line application, which runs a configurable number of seeders and leechers in one process and records its runtime behavior. The application can be configured in several ways to implement a wide range of test scenarios and is bundled as a Java archive (\,\emph{jar}\,) file, which can be executed using the following statement:
+
+\begin{verbatim}
+$ java -jar benchmark-1.0.jar
+\end{verbatim}
+
+The application can be configured using command line arguments, which are listed below. There are always two versions of the same argument, separated by a comma. The single dashed arguments are the short forms, while the double dashed arguments are the long forms. Starred arguments are required.
+
+\begin{flushleft}
+\texttt{-}h, \texttt{-{}-}help
+\linebreak
+If set, the usage is printed.
+
+
+
+* \texttt{-}pt, \texttt{-{}-}peer\texttt{-}type
+\linebreak
+Specifies the peer type, which can be Local or TCP and refer to the transport protocols explained in chapter \ref{subsubsec:transport}. This argument is required.
+
+\texttt{-}mc, \texttt{-{}-}max\texttt{-}connections
+\linebreak
+Specifies the maximum number of connections per leecher. The default value is 0, which means no limit.
+
+\texttt{-}mds, \texttt{-{}-}meta\texttt{-}data\texttt{-}size
+\linebreak
+Specifies the meta data size in bytes. This argument is ignored, if \texttt{-}bc, \texttt{-{}-}binary\texttt{-}codec is set. The default value is 0.
+
+\texttt{-}bc, \texttt{-{}-}binary\texttt{-}codec
+\linebreak
+If set, the network communication uses binary (de)serialization. This flag is set implicitly, if the TCP peer type is used.
+
+
+
+* \texttt{-}at, \texttt{-{}-}algorithm\texttt{-}type
+\linebreak
+Specifies the distribution algorithm type, which can be SuperSeederChunkedSwarm, ChunkedSwarm, Logarithmic or Sequential and refer to the models presented in chapter \ref{ch:theory}. This argument is required.
+
+
+
+* \texttt{-}s, \texttt{-{}-}size
+\linebreak
+Specifies the size in bytes of the data set. This argument is required.
+
+\texttt{-}p, \texttt{-{}-}partitions
+\linebreak
+Specifies the number of partitions of the data set. The default value is 1.
+
+\texttt{-}cc, \texttt{-{}-}chunk\texttt{-}count
+\linebreak  
+Specifies the number of chunks of the data set. The default value is 1.
+
+
+
+* \texttt{-}sl, \texttt{-{}-}seeder\texttt{-}leecher\texttt{-}couples
+\linebreak
+Specifies the number of seeder\,/\,leecher couples (\,peers\,). This argument is required.
+
+* \texttt{-}ss, \texttt{-{}-}super\texttt{-}seeders
+\linebreak
+Number of super seeders (\,super peers\,). This argument is required.
+
+\texttt{-}sd, \texttt{-{}-}super\texttt{-}seeder\texttt{-}download\texttt{-}rate
+\linebreak
+Specifies the download rate in bytes per second of the super seeder. The default value is 0, which means no limit.
+
+\texttt{-}su, \texttt{-{}-}super\texttt{-}seeder\texttt{-}upload\texttt{-}rate
+\linebreak
+Specifies the upload rate in bytes per second of the super seeder. The default value is 0, which means no limit.
+
+\texttt{-}d, \texttt{-{}-}download\texttt{-}rate
+\linebreak
+Specifies the download rate of each leecher in bytes per second. The default value is 0, which means no limit.
+
+\texttt{-}u, \texttt{-{}-}upload\texttt{-}rate
+\linebreak
+Specifies the upload rate of each seeder in bytes per second. The default value is 0, which means no limit.
+
+
+
+\texttt{-}re, \texttt{-{}-}record\texttt{-}events
+\linebreak
+If set, the events are recorded.
+
+\texttt{-}rs, \texttt{-{}-}record\texttt{-}statistics
+\linebreak
+If set, the statistics are recorded.
+
+\texttt{-}rd, \texttt{-{}-}records\texttt{-}directory
+\linebreak
+Specifies the directory, where all records are stored. The default value is '.', which refers to the directory, where the application is running.
+\end{flushleft}
 
 \section{Module: Record-Viewer}
 \label{sec:recordviewer}

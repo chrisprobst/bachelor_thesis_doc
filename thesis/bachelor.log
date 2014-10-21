@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.19)  18 OCT 2014 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.19)  21 OCT 2014 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,7 +963,7 @@ Package epstopdf Info: Source file: <fig/sequentialmodel.eps>
 (epstopdf)                    date: 2014-10-15 17:01:37
 (epstopdf)                    size: 14537 bytes
 (epstopdf)             Output file: <fig/sequentialmodel-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-15 17:16:59
+(epstopdf)                    date: 2014-10-19 21:40:14
 (epstopdf)                    size: 9331 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/sequentialmodel-eps-co
 nverted-to.pdf fig/sequentialmodel.eps>
@@ -987,7 +987,7 @@ Package epstopdf Info: Source file: <fig/peermesh.eps>
 (epstopdf)                    date: 2014-10-15 16:59:48
 (epstopdf)                    size: 13687 bytes
 (epstopdf)             Output file: <fig/peermesh-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-15 17:17:00
+(epstopdf)                    date: 2014-10-19 21:40:15
 (epstopdf)                    size: 8187 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/peermesh-eps-converted
 -to.pdf fig/peermesh.eps>
@@ -1006,7 +1006,7 @@ Package epstopdf Info: Source file: <fig/logarithmicmodel.eps>
 (epstopdf)                    size: 13916 bytes
 (epstopdf)             Output file: <fig/logarithmicmodel-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2014-10-15 17:17:01
+(epstopdf)                    date: 2014-10-19 21:53:34
 (epstopdf)                    size: 8353 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/logarithmicmodel-eps-c
 onverted-to.pdf fig/logarithmicmodel.eps>
@@ -1031,7 +1031,7 @@ Package epstopdf Info: Source file: <fig/chunkedswarmmodel1.eps>
 (epstopdf)                    size: 18798 bytes
 (epstopdf)             Output file: <fig/chunkedswarmmodel1-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2014-10-15 21:40:41
+(epstopdf)                    date: 2014-10-19 21:53:35
 (epstopdf)                    size: 11633 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/chunkedswarmmodel1-eps
 -converted-to.pdf fig/chunkedswarmmodel1.eps>
@@ -1049,7 +1049,7 @@ Package epstopdf Info: Source file: <fig/chunkedswarmmodel2.eps>
 (epstopdf)                    size: 24532 bytes
 (epstopdf)             Output file: <fig/chunkedswarmmodel2-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2014-10-15 21:40:42
+(epstopdf)                    date: 2014-10-19 21:53:36
 (epstopdf)                    size: 14508 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/chunkedswarmmodel2-eps
 -converted-to.pdf fig/chunkedswarmmodel2.eps>
@@ -1067,7 +1067,7 @@ Package epstopdf Info: Source file: <fig/chunkedswarmformula1.eps>
 (epstopdf)                    size: 45456 bytes
 (epstopdf)             Output file: <fig/chunkedswarmformula1-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2014-10-15 21:59:55
+(epstopdf)                    date: 2014-10-19 21:40:19
 (epstopdf)                    size: 24531 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/chunkedswarmformula1-e
 ps-converted-to.pdf fig/chunkedswarmformula1.eps>
@@ -1096,7 +1096,7 @@ Package epstopdf Info: Source file: <fig/arch.eps>
 (epstopdf)                    date: 2014-10-18 14:03:15
 (epstopdf)                    size: 349460 bytes
 (epstopdf)             Output file: <fig/arch-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-18 14:03:20
+(epstopdf)                    date: 2014-10-19 21:40:20
 (epstopdf)                    size: 172253 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/arch-eps-converted-to.
 pdf fig/arch.eps>
@@ -1113,42 +1113,48 @@ Package pdftex.def Info: fig/arch-eps-converted-to.pdf used on input line 6.
 
 
 
- <./fig/arch-eps-converted-to.pdf>])
+ <./fig/arch-eps-converted-to.pdf>]
+Overfull \hbox (0.6405pt too wide) in paragraph at lines 15--16
+\T1/ptm/m/n/10.95 the DataBase, Al-go-rithm and Mon-i-tor-ing mod-ule can be re
+-placed or even omit-ted the Core-Framework
+ []
+
+)
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [10] (./chapter-frame-modules.tex
 Chapter 5.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 10.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 10.
+(Font)              scaled to size 11.03998pt on input line 8.
 Package epstopdf Info: Source file: <fig/autoconnect.eps>
 (epstopdf)                    date: 2014-10-15 17:16:50
 (epstopdf)                    size: 100227 bytes
 (epstopdf)             Output file: <fig/autoconnect-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-15 17:17:02
-(epstopdf)                    size: 61183 bytes
+(epstopdf)                    date: 2014-10-19 21:40:21
+(epstopdf)                    size: 61185 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/autoconnect-eps-conver
 ted-to.pdf fig/autoconnect.eps>
-(epstopdf)             \includegraphics on input line 25.
+(epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
 <fig/autoconnect-eps-converted-to.pdf, id=398, 375.4025pt x 254.9525pt>
 File: fig/autoconnect-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/autoconnect-eps-converted-to.pdf>
 Package pdftex.def Info: fig/autoconnect-eps-converted-to.pdf used on input lin
-e 25.
+e 23.
 (pdftex.def)             Requested size: 265.5889pt x 180.3834pt.
 Package epstopdf Info: Source file: <fig/reconnect.eps>
 (epstopdf)                    date: 2014-10-18 10:59:32
 (epstopdf)                    size: 67661 bytes
 (epstopdf)             Output file: <fig/reconnect-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-18 10:59:36
+(epstopdf)                    date: 2014-10-19 21:40:22
 (epstopdf)                    size: 41988 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/reconnect-eps-converte
 d-to.pdf fig/reconnect.eps>
-(epstopdf)             \includegraphics on input line 33.
+(epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig/reconnect-eps-converted-to.pdf, id=399, 367.3725pt x 228.855pt>
@@ -1156,27 +1162,27 @@ File: fig/reconnect-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/reconnect-eps-converted-to.pdf>
 Package pdftex.def Info: fig/reconnect-eps-converted-to.pdf used on input line 
-33.
+31.
 (pdftex.def)             Requested size: 265.5889pt x 165.4599pt.
 Package epstopdf Info: Source file: <fig/mesh.eps>
 (epstopdf)                    date: 2014-10-15 17:01:16
 (epstopdf)                    size: 19315 bytes
 (epstopdf)             Output file: <fig/mesh-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-10-15 17:17:03
+(epstopdf)                    date: 2014-10-19 21:40:23
 (epstopdf)                    size: 11933 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/mesh-eps-converted-to.
 pdf fig/mesh.eps>
-(epstopdf)             \includegraphics on input line 39.
+(epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig/mesh-eps-converted-to.pdf, id=400, 142.5325pt x 85.31876pt>
 File: fig/mesh-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/mesh-eps-converted-to.pdf>
-Package pdftex.def Info: fig/mesh-eps-converted-to.pdf used on input line 39.
+Package pdftex.def Info: fig/mesh-eps-converted-to.pdf used on input line 37.
 (pdftex.def)             Requested size: 110.6609pt x 66.23979pt.
 
-Overfull \hbox (11.8836pt too wide) in paragraph at lines 40--40
+Overfull \hbox (11.8836pt too wide) in paragraph at lines 38--38
 [][]\T1/ptm/m/n/10.95 Leecher/Seeder
  []
 
@@ -1226,7 +1232,7 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 [18]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 123.
+(hyperref)                than one, level fixed on input line 121.
 
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
@@ -1239,18 +1245,18 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 141.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 139.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (10.68579pt too wide) in paragraph at lines 150--150
+Overfull \hbox (10.68579pt too wide) in paragraph at lines 148--148
 []    \T1/pcr/m/n/10.95 List of ChunkRequest requestChunks(AvailableDataSetsOfA
 llSeeders)[] 
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 154.
+(hyperref)                than one, level fixed on input line 152.
 
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
@@ -1276,26 +1282,34 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 ] (./chapter-app-modules.tex
 Chapter 6.
-) [27
+[27
 
 
-] [28
+]
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[28])
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
+
+
+[29] [30
 
 
 ] (./chapter-evaluation.tex
 Chapter 7.
-) [29
-
-
-] [30
-
-
-] (./chapter-futurework.tex
-Chapter 8.
 ) [31
 
 
 ] [32
+
+
+] (./chapter-futurework.tex
+Chapter 8.
+) [33
+
+
+] [34
 
 
 ] (./bachelor.bbl
@@ -1303,17 +1317,17 @@ Chapter 8.
 LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
                before end of `thebibliography' environment on input line 10.
 
-) [33
+) [35
 
 
 ]
 \openout2 = `bachelor-declaration.aux'.
 
- (./bachelor-declaration.tex [34
+ (./bachelor-declaration.tex [36
 
 
 
-]) [35] [36
+]) [37] [38
 
 
 
@@ -1329,7 +1343,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
- [37
+ [39
 
 
 ]
@@ -1471,8 +1485,8 @@ Package rerunfilecheck Info: File `bachelor.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 9954 strings out of 493117
- 150175 string characters out of 6135433
+ 9956 strings out of 493117
+ 150189 string characters out of 6135432
  280070 words of memory out of 5000000
  13021 multiletter control sequences out of 15000+600000
  56506 words of font info for 81 fonts, out of 8000000 for 9000
@@ -1489,10 +1503,10 @@ mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on bachelor.pdf (49 pages, 519996 bytes).
+Output written on bachelor.pdf (51 pages, 525151 bytes).
 PDF statistics:
- 605 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 615 PDF objects out of 1000 (max. 8388607)
+ 534 compressed objects within 6 object streams
+ 107 named destinations out of 1000 (max. 500000)
  392 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -32,8 +32,8 @@
 \contentsline {section}{\numberline {5.4}Module: Monitoring}{25}{section.5.4}
 \contentsline {chapter}{\numberline {6}Application Modules}{27}{chapter.6}
 \contentsline {section}{\numberline {6.1}Module: Benchmark}{27}{section.6.1}
-\contentsline {section}{\numberline {6.2}Module: Record-Viewer}{27}{section.6.2}
-\contentsline {section}{\numberline {6.3}Module: Streaming}{27}{section.6.3}
-\contentsline {chapter}{\numberline {7}Evaluation}{29}{chapter.7}
-\contentsline {chapter}{\numberline {8}Future work}{31}{chapter.8}
-\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.4}
+\contentsline {section}{\numberline {6.2}Module: Record-Viewer}{29}{section.6.2}
+\contentsline {section}{\numberline {6.3}Module: Streaming}{29}{section.6.3}
+\contentsline {chapter}{\numberline {7}Evaluation}{31}{chapter.7}
+\contentsline {chapter}{\numberline {8}Future work}{33}{chapter.8}
+\contentsline {chapter}{\nonumberline Bibliography}{35}{chapter*.4}

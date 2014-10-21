@@ -2,10 +2,8 @@
 \label{ch:framework}
 
 
-
 \section{Module: Core-Framework}
 \label{sec:core}
-
 
 \subsection{Network}
 The network implementation uses the concept of \emph{leechers} and \emph{seeders}. A leecher connects to one or more seeders and downloads chunks from them. A seeder has multiple leechers connected to it and uploads chunks to them. Chunk transfers are pull-based, so they can only be requested by the leecher, while meta data or address announcements are push-based and thus transferred without being requested. Therefore, every leecher knows exactly what a seeder has to offer without asking, but only requests the chunks it needs. See section \ref{subsubsec:downloadreq} for more information.
