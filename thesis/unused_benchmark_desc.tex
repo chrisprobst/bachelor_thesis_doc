@@ -1,17 +1,3 @@
-\chapter{Application Modules}
-\label{ch:app}
-
-\section{Module: Benchmark}
-\label{sec:benchmark}
-
-The Benchmark module consists of an command line application, which runs a configurable number of seeders and leechers in one process and records its runtime behavior. The application can be configured in several ways to implement a wide range of test scenarios and is bundled as a Java archive (\,\emph{jar}\,) file, which can be executed using the following statement:
-
-\begin{verbatim}
-$ java -jar benchmark-1.0.jar
-\end{verbatim}
-
-The application can be configured using command line arguments, which are listed below. There are always two versions of the same argument, separated by a comma. The single dashed arguments are the short forms, while the double dashed arguments are the long forms. Starred arguments are required.
-
 \begin{flushleft}
 \texttt{-}h, \texttt{-{}-}help
 \linebreak
@@ -95,10 +81,3 @@ If set, the statistics are recorded.
 \linebreak
 Specifies the directory, where all records are stored. The default value is '.', which refers to the directory, where the application is running.
 \end{flushleft}
-
-\section{Module: Record-Viewer}
-\label{sec:recordviewer}
-
-\section{Module: Streaming}
-\label{sec:streaming}
-
