@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {6.2}Backends: Emulated, In-Memory and Persistent}{20}{section.6.2}
 \contentsline {chapter}{\numberline {7}Module: Algorithm}{21}{chapter.7}
 \contentsline {section}{\numberline {7.1}Algorithms: Sequential and Logarithmic}{22}{section.7.1}
-\contentsline {section}{\numberline {7.2}Algorithm: ChunkedSwarm}{22}{section.7.2}
+\contentsline {section}{\numberline {7.2}Algorithm: Chunked-Swarm}{22}{section.7.2}
 \contentsline {chapter}{\numberline {8}Modules: Monitoring, Record-Viewer and Benchmark}{25}{chapter.8}
 \contentsline {chapter}{\numberline {9}Module: Streaming}{27}{chapter.9}
 \contentsline {chapter}{\numberline {10}Evaluation}{29}{chapter.10}

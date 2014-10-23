@@ -30,7 +30,7 @@
 \BOOKMARK [1][-]{section.6.2}{6.2 Backends: Emulated, In-Memory and Persistent}{chapter.6}% 30
 \BOOKMARK [0][-]{chapter.7}{7 Module: Algorithm}{}% 31
 \BOOKMARK [1][-]{section.7.1}{7.1 Algorithms: Sequential and Logarithmic}{chapter.7}% 32
-\BOOKMARK [1][-]{section.7.2}{7.2 Algorithm: ChunkedSwarm}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.2}{7.2 Algorithm: Chunked-Swarm}{chapter.7}% 33
 \BOOKMARK [0][-]{chapter.8}{8 Modules: Monitoring, Record-Viewer and Benchmark}{}% 34
 \BOOKMARK [0][-]{chapter.9}{9 Module: Streaming}{}% 35
 \BOOKMARK [0][-]{chapter.10}{10 Evaluation}{}% 36
