@@ -11,25 +11,26 @@
 \contentsline {section}{\numberline {3.2}Model: Logarithmic}{6}{section.3.2}
 \contentsline {section}{\numberline {3.3}Model: Chunked-Swarm}{7}{section.3.3}
 \contentsline {chapter}{\numberline {4}Architecture}{9}{chapter.4}
-\contentsline {chapter}{\numberline {5}Module: Core-Framework}{11}{chapter.5}
-\contentsline {section}{\numberline {5.1}Network}{11}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Automatic Connect}{12}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Meta Data Announcements}{13}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Download Requests}{13}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Nonblocking I/O}{14}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Transport: In-VM and TCP}{15}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}Traffic-Shaping}{15}{subsection.5.1.6}
-\contentsline {section}{\numberline {5.2}Concurrency}{17}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Event-Loop}{17}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Lock-Free Progamming}{17}{subsection.5.2.2}
-\contentsline {chapter}{\numberline {6}Module: DataBase}{19}{chapter.6}
-\contentsline {section}{\numberline {6.1}Meta Data}{19}{section.6.1}
-\contentsline {section}{\numberline {6.2}Backends: Emulated, In-Memory and Persistent}{20}{section.6.2}
-\contentsline {chapter}{\numberline {7}Module: Algorithm}{21}{chapter.7}
-\contentsline {section}{\numberline {7.1}Algorithms: Sequential and Logarithmic}{22}{section.7.1}
-\contentsline {section}{\numberline {7.2}Algorithm: Chunked-Swarm}{22}{section.7.2}
-\contentsline {chapter}{\numberline {8}Modules: Monitoring, Record-Viewer and Benchmark}{25}{chapter.8}
-\contentsline {chapter}{\numberline {9}Module: Streaming}{27}{chapter.9}
-\contentsline {chapter}{\numberline {10}Evaluation}{29}{chapter.10}
-\contentsline {chapter}{\numberline {11}Future work}{31}{chapter.11}
-\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.4}
+\contentsline {chapter}{\numberline {5}Modules}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}Core-Framework}{11}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Network}{11}{subsection.5.1.1}
+\contentsline {subsubsection}{\nonumberline Automatic Connect}{12}{section*.4}
+\contentsline {subsubsection}{\nonumberline Meta Data Announcements}{13}{section*.5}
+\contentsline {subsubsection}{\nonumberline Download Requests}{13}{section*.6}
+\contentsline {subsubsection}{\nonumberline Nonblocking I/O}{14}{section*.7}
+\contentsline {subsubsection}{\nonumberline Transport: In-VM and TCP}{15}{section*.8}
+\contentsline {subsubsection}{\nonumberline Traffic-Shaping}{15}{section*.9}
+\contentsline {subsection}{\numberline {5.1.2}Concurrency}{16}{subsection.5.1.2}
+\contentsline {subsubsection}{\nonumberline Event-Loop}{16}{section*.10}
+\contentsline {subsubsection}{\nonumberline Lock-Free Progamming}{17}{section*.11}
+\contentsline {section}{\numberline {5.2}DataBase}{18}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Meta Data}{18}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Backends: Emulated, In-Memory and Persistent}{18}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Algorithm}{19}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Algorithms: Sequential and Logarithmic}{19}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Algorithm: Chunked-Swarm}{20}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Monitoring, Record-Viewer and Benchmark}{21}{section.5.4}
+\contentsline {section}{\numberline {5.5}Streaming}{22}{section.5.5}
+\contentsline {chapter}{\numberline {6}Evaluation}{23}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{25}{chapter.7}
+\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.12}

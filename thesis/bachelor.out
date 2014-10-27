@@ -14,25 +14,18 @@
 \BOOKMARK [1][-]{section.3.2}{3.2 Model: Logarithmic}{chapter.3}% 14
 \BOOKMARK [1][-]{section.3.3}{3.3 Model: Chunked-Swarm}{chapter.3}% 15
 \BOOKMARK [0][-]{chapter.4}{4 Architecture}{}% 16
-\BOOKMARK [0][-]{chapter.5}{5 Module: Core-Framework}{}% 17
-\BOOKMARK [1][-]{section.5.1}{5.1 Network}{chapter.5}% 18
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Automatic Connect}{section.5.1}% 19
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Meta Data Announcements}{section.5.1}% 20
-\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Download Requests}{section.5.1}% 21
-\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 Nonblocking I/O}{section.5.1}% 22
-\BOOKMARK [2][-]{subsection.5.1.5}{5.1.5 Transport: In-VM and TCP}{section.5.1}% 23
-\BOOKMARK [2][-]{subsection.5.1.6}{5.1.6 Traffic-Shaping}{section.5.1}% 24
-\BOOKMARK [1][-]{section.5.2}{5.2 Concurrency}{chapter.5}% 25
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Event-Loop}{section.5.2}% 26
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Lock-Free Progamming}{section.5.2}% 27
-\BOOKMARK [0][-]{chapter.6}{6 Module: DataBase}{}% 28
-\BOOKMARK [1][-]{section.6.1}{6.1 Meta Data}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.2}{6.2 Backends: Emulated, In-Memory and Persistent}{chapter.6}% 30
-\BOOKMARK [0][-]{chapter.7}{7 Module: Algorithm}{}% 31
-\BOOKMARK [1][-]{section.7.1}{7.1 Algorithms: Sequential and Logarithmic}{chapter.7}% 32
-\BOOKMARK [1][-]{section.7.2}{7.2 Algorithm: Chunked-Swarm}{chapter.7}% 33
-\BOOKMARK [0][-]{chapter.8}{8 Modules: Monitoring, Record-Viewer and Benchmark}{}% 34
-\BOOKMARK [0][-]{chapter.9}{9 Module: Streaming}{}% 35
-\BOOKMARK [0][-]{chapter.10}{10 Evaluation}{}% 36
-\BOOKMARK [0][-]{chapter.11}{11 Future work}{}% 37
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 38
+\BOOKMARK [0][-]{chapter.5}{5 Modules}{}% 17
+\BOOKMARK [1][-]{section.5.1}{5.1 Core-Framework}{chapter.5}% 18
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Network}{section.5.1}% 19
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Concurrency}{section.5.1}% 20
+\BOOKMARK [1][-]{section.5.2}{5.2 DataBase}{chapter.5}% 21
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Meta Data}{section.5.2}% 22
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Backends: Emulated, In-Memory and Persistent}{section.5.2}% 23
+\BOOKMARK [1][-]{section.5.3}{5.3 Algorithm}{chapter.5}% 24
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Algorithms: Sequential and Logarithmic}{section.5.3}% 25
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Algorithm: Chunked-Swarm}{section.5.3}% 26
+\BOOKMARK [1][-]{section.5.4}{5.4 Monitoring, Record-Viewer and Benchmark}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.5}{5.5 Streaming}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{6 Evaluation}{}% 29
+\BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 30
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 31

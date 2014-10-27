@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.19)  26 OCT 2014 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.19)  27 OCT 2014 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**bachelor.tex
+**bachelor.tex -recorder
 (./bachelor.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
@@ -805,7 +805,7 @@ LaTeX Info: Redefining \nameref on input line 62.
 \openout2 = `bachelor-titlepage.aux'.
 
  (./bachelor-titlepage.tex
-<fig/unilogo.pdf, id=156, 809.0225pt x 467.7475pt>
+<fig/unilogo.pdf, id=128, 809.0225pt x 467.7475pt>
 File: fig/unilogo.pdf Graphic file (type pdf)
  <use fig/unilogo.pdf>
 Package pdftex.def Info: fig/unilogo.pdf used on input line 5.
@@ -969,7 +969,7 @@ Package epstopdf Info: Source file: <fig/sequentialmodel.eps>
 nverted-to.pdf fig/sequentialmodel.eps>
 (epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
-<fig/sequentialmodel-eps-converted-to.pdf, id=299, 227.85126pt x 85.31876pt>
+<fig/sequentialmodel-eps-converted-to.pdf, id=263, 227.85126pt x 85.31876pt>
 File: fig/sequentialmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/sequentialmodel-eps-converted-to.pdf>
@@ -994,7 +994,7 @@ Package epstopdf Info: Source file: <fig/peermesh.eps>
 (epstopdf)             \includegraphics on input line 25.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/peermesh-eps-converted-to.pdf, id=311, 170.6375pt x 85.31876pt>
+<fig/peermesh-eps-converted-to.pdf, id=274, 170.6375pt x 85.31876pt>
 File: fig/peermesh-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/peermesh-eps-converted-to.pdf>
@@ -1013,7 +1013,7 @@ onverted-to.pdf fig/logarithmicmodel.eps>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/logarithmicmodel-eps-converted-to.pdf, id=312, 170.6375pt x 85.31876pt>
+<fig/logarithmicmodel-eps-converted-to.pdf, id=275, 170.6375pt x 85.31876pt>
 File: fig/logarithmicmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/logarithmicmodel-eps-converted-to.pdf>
@@ -1038,7 +1038,7 @@ f>
 (epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/chunkedswarmmodel1-eps-converted-to.pdf, id=325, 142.5325pt x 115.43124pt>
+<fig/chunkedswarmmodel1-eps-converted-to.pdf, id=288, 142.5325pt x 115.43124pt>
 File: fig/chunkedswarmmodel1-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/chunkedswarmmodel1-eps-converted-to.pdf>
 Package pdftex.def Info: fig/chunkedswarmmodel1-eps-converted-to.pdf used on in
@@ -1056,7 +1056,7 @@ f>
 (epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/chunkedswarmmodel2-eps-converted-to.pdf, id=326, 142.5325pt x 115.43124pt>
+<fig/chunkedswarmmodel2-eps-converted-to.pdf, id=289, 142.5325pt x 115.43124pt>
 File: fig/chunkedswarmmodel2-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/chunkedswarmmodel2-eps-converted-to.pdf>
 Package pdftex.def Info: fig/chunkedswarmmodel2-eps-converted-to.pdf used on in
@@ -1074,7 +1074,7 @@ ps-converted-to.pdf fig/chunkedswarmformula1.eps>
 (epstopdf)             \includegraphics on input line 69.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/chunkedswarmformula1-eps-converted-to.pdf, id=327, 475.7775pt x 136.51pt>
+<fig/chunkedswarmformula1-eps-converted-to.pdf, id=290, 475.7775pt x 136.51pt>
 File: fig/chunkedswarmformula1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/chunkedswarmformula1-eps-converted-to.pdf>
@@ -1086,7 +1086,14 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [7 <./fig/chunkedswarmmodel1-eps-converted-to.pdf> <./fig/chunkedswarmmodel2-ep
-s-converted-to.pdf> <./fig/chunkedswarmformula1-eps-converted-to.pdf>])
+s-converted-to.pdf> <./fig/chunkedswarmformula1-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 80.
+
+
+LaTeX Warning: Reference `streaming' on page 8 undefined on input line 80.
+
+)
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
@@ -1102,7 +1109,7 @@ Package epstopdf Info: Source file: <fig/arch.eps>
 pdf fig/arch.eps>
 (epstopdf)             \includegraphics on input line 6.
 Package epstopdf Info: Output file is already uptodate.
-<fig/arch-eps-converted-to.pdf, id=354, 507.8975pt x 420.57124pt>
+<fig/arch-eps-converted-to.pdf, id=318, 507.8975pt x 420.57124pt>
 File: fig/arch-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/arch-eps-converted-to.pdf>
@@ -1126,9 +1133,9 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 [10] (./chapter-modules.tex
 Chapter 5.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 14.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 14.
+(Font)              scaled to size 11.03998pt on input line 8.
 Package epstopdf Info: Source file: <fig/autoconnect.eps>
 (epstopdf)                    date: 2014-10-15 17:16:50
 (epstopdf)                    size: 100227 bytes
@@ -1137,14 +1144,14 @@ Package epstopdf Info: Source file: <fig/autoconnect.eps>
 (epstopdf)                    size: 61185 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/autoconnect-eps-conver
 ted-to.pdf fig/autoconnect.eps>
-(epstopdf)             \includegraphics on input line 19.
+(epstopdf)             \includegraphics on input line 24.
 Package epstopdf Info: Output file is already uptodate.
-<fig/autoconnect-eps-converted-to.pdf, id=376, 375.4025pt x 254.9525pt>
+<fig/autoconnect-eps-converted-to.pdf, id=340, 375.4025pt x 254.9525pt>
 File: fig/autoconnect-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/autoconnect-eps-converted-to.pdf>
 Package pdftex.def Info: fig/autoconnect-eps-converted-to.pdf used on input lin
-e 19.
+e 24.
 (pdftex.def)             Requested size: 265.5889pt x 180.3834pt.
 Package epstopdf Info: Source file: <fig/reconnect.eps>
 (epstopdf)                    date: 2014-10-18 10:59:32
@@ -1154,15 +1161,15 @@ Package epstopdf Info: Source file: <fig/reconnect.eps>
 (epstopdf)                    size: 41988 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/reconnect-eps-converte
 d-to.pdf fig/reconnect.eps>
-(epstopdf)             \includegraphics on input line 27.
+(epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/reconnect-eps-converted-to.pdf, id=377, 367.3725pt x 228.855pt>
+<fig/reconnect-eps-converted-to.pdf, id=341, 367.3725pt x 228.855pt>
 File: fig/reconnect-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/reconnect-eps-converted-to.pdf>
 Package pdftex.def Info: fig/reconnect-eps-converted-to.pdf used on input line 
-27.
+32.
 (pdftex.def)             Requested size: 265.5889pt x 165.4599pt.
 Package epstopdf Info: Source file: <fig/mesh.eps>
 (epstopdf)                    date: 2014-10-15 17:01:16
@@ -1172,22 +1179,22 @@ Package epstopdf Info: Source file: <fig/mesh.eps>
 (epstopdf)                    size: 11933 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/mesh-eps-converted-to.
 pdf fig/mesh.eps>
-(epstopdf)             \includegraphics on input line 33.
+(epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/mesh-eps-converted-to.pdf, id=378, 142.5325pt x 85.31876pt>
+<fig/mesh-eps-converted-to.pdf, id=342, 142.5325pt x 85.31876pt>
 File: fig/mesh-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/mesh-eps-converted-to.pdf>
-Package pdftex.def Info: fig/mesh-eps-converted-to.pdf used on input line 33.
+Package pdftex.def Info: fig/mesh-eps-converted-to.pdf used on input line 38.
 (pdftex.def)             Requested size: 110.6609pt x 66.23979pt.
 
-Overfull \hbox (11.8836pt too wide) in paragraph at lines 34--34
+Overfull \hbox (11.8836pt too wide) in paragraph at lines 39--39
 [][]\T1/ptm/m/n/10.95 Leecher/Seeder
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4660) has occurred while \output is active []
 
  [11
 
@@ -1204,7 +1211,7 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2689) has occurred while \output is active []
 
 
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
@@ -1219,88 +1226,58 @@ Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[17
-
-
-]
+[17]
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
 [18]
-Chapter 6.
-
-Underfull \vbox (badness 3954) has occurred while \output is active []
-
- [19
-
-
-
-
-]
-Overfull \vbox (1.39674pt too high) has occurred while \output is active []
-
-
-[20]
-Chapter 7.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 137.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1pcr.fd
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 142.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (10.68579pt too wide) in paragraph at lines 146--146
+Overfull \hbox (10.68579pt too wide) in paragraph at lines 151--151
 []    \T1/pcr/m/n/10.95 List of ChunkRequest requestChunks(AvailableDataSetsOfA
 llSeeders)[] 
  []
 
-[21
 
-
-
-
-]
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[22]
+[19]
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[23] [24
-
-
-]
-Chapter 8.
-[25
-
-
-]
+[20]
 Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-[26]
-Chapter 9.
-) [27
+[21])
+Overfull \vbox (1.39674pt too high) has occurred while \output is active []
 
 
-] [28
+[22] (./chapter-evaluation.tex
+Chapter 6.
+) [23
 
 
-] (./chapter-evaluation.tex
-Chapter 10.
-) [29
 
 
-] [30
+] [24
 
 
-] (./chapter-futurework.tex
-Chapter 11.
-) [31
+] (./chapter-conclusion.tex
+Chapter 7.
+) [25
 
 
-] [32
+] [26
 
 
 ] (./bachelor.bbl
@@ -1308,23 +1285,21 @@ Chapter 11.
 LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
                before end of `thebibliography' environment on input line 10.
 
-) [33
+) [27
 
 
 ]
 \openout2 = `bachelor-declaration.aux'.
 
- (./bachelor-declaration.tex [34
+ (./bachelor-declaration.tex [28
 
 
 
-]) [35] [36
+]) [29] [30
 
 
 
 ] (./bachelor-cd.tex
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 13.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
@@ -1334,7 +1309,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
- [37
+ [31
 
 
 ]
@@ -1462,7 +1437,7 @@ fig/reconnect-eps-converted-to.pdf
 fig/mesh-eps-converted-to.pdf
    t1pcr.fd    2001/06/04 font definitions for T1/pcr.
 chapter-evaluation.tex
-chapter-futurework.tex
+chapter-conclusion.tex
 bachelor.bbl
 bachelor-declaration.tex
 bachelor-cd.tex
@@ -1471,17 +1446,20 @@ bachelor-cd.tex
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
 Package rerunfilecheck Info: File `bachelor.out' has not changed.
-(rerunfilecheck)             Checksum: B9A5188B321B77442544FB3F4CB44CCA;2382.
+(rerunfilecheck)             Checksum: D07ED7C078635AD9B68F8D6B89064EA4;1880.
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 9935 strings out of 493117
- 149572 string characters out of 6135432
- 279914 words of memory out of 5000000
- 13009 multiletter control sequences out of 15000+600000
+ 9927 strings out of 493117
+ 149628 string characters out of 6135432
+ 279961 words of memory out of 5000000
+ 13006 multiletter control sequences out of 15000+600000
  56506 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,59p,1695b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,59p,1705b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -1493,10 +1471,10 @@ mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on bachelor.pdf (49 pages, 526440 bytes).
+Output written on bachelor.pdf (43 pages, 523390 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 502 compressed objects within 6 object streams
- 101 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 526 PDF objects out of 1000 (max. 8388607)
+ 454 compressed objects within 5 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 
