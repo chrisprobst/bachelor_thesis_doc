@@ -1,3 +1,5 @@
+%!TEX root = bachelor.tex
+
 \chapter{Theory}
 \label{theory}
 
@@ -7,7 +9,7 @@
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.45\linewidth]{sequentialmodel}
-	\caption{Sequential model}
+	\caption{Sequential Model}
 	\label{fig:sequentialmodel}
 \end{figure}
 
@@ -23,13 +25,13 @@ To estimate the efficiency of this model, let $b$ the bandwidth of the server in
 	\centering
 	\begin{minipage}[b]{0.4\linewidth}
 		\includegraphics[width=\textwidth]{peermesh}
-		\caption{Peer mesh}
+		\caption{Peer Mesh}
 		\label{fig:peermesh}
 	\end{minipage}
 	\hspace{0.1\linewidth}
 	\begin{minipage}[b]{0.4\linewidth}
 		\includegraphics[width=\textwidth]{logarithmicmodel}
-		\caption{Logarithmic model}
+		\caption{Logarithmic Model}
 		\label{fig:logarithmicmodel}
 	\end{minipage}
 
@@ -47,29 +49,23 @@ In comparison to the Sequential model, this one increases the complexity of the 
 \section{Model: Chunked-Swarm}
 \label{theory:model:chunkedswarm}
 
-\begin{figure} [ht]
-	\centering
-	\begin{minipage}[b]{0.4\linewidth}
-		\centering
-		\includegraphics[width=0.7\textwidth]{chunkedswarmmodel1}
-		\caption{Chunked-Swarm model 1}
-		\label{fig:chunkedswarmmodel1}
-	\end{minipage}
-	\hspace{0.1\linewidth}
-	\begin{minipage}[b]{0.4\linewidth}
-		\centering
-		\includegraphics[width=0.7\textwidth]{chunkedswarmmodel2}
-		\caption{Chunked-Swarm model 2}
-		\label{fig:chunkedswarmmodel2}
-	\end{minipage}
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Distribution A\label{fig:chunkedswarmmodel1}]{
+	 		\includegraphics[width=0.3\textwidth]{chunkedswarmmodel1}
+	 	}
+	 	\hspace{0.2\textwidth}
+	 	\subfigure[Distribution B\label{fig:chunkedswarmmodel2}]{
+	 		\includegraphics[width=0.3\textwidth]{chunkedswarmmodel2}
+	 	}
+
+		\subfigure[Complete Distribution\label{fig:chunkedswarmformula1}]{
+	 		\includegraphics[width=0.9\textwidth]{chunkedswarmformula1}
+	 	}
+		\caption{Chunked-Swarm Model}
+	\end{center}
 \end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.8\linewidth]{chunkedswarmformula1}
-	\caption{Chunked-Swarm chunk completion diagramm}
-	\label{fig:chunkedswarmformula1}
-\end{figure}
 
 The Chunked-Swarm model is an enhancement of the Logarithmic model. It allows multiple uploads in parallel and splits the data set into chunks before transferring it. Therefore, peers can not download the whole data set at once. Instead, they have to request each chunk individually. Since the size of these chunks is smaller than the size of the whole data set, peers can help to distribute the data set more quickly. The figure \ref{fig:chunkedswarmmodel1} and \ref{fig:chunkedswarmmodel2} show four peers distributing three chunks. At first peer one has the data set completely. The remaining peers each request one chunk in parallel. These peers will then distribute their chunks among themselves. They do so by announcing their own chunks to all other peers they are connected with, which can then request these chunks. It is important to note, that this model is always pull-based. A chunk is only uploaded, if a peer explicitly requests it.
 
@@ -77,5 +73,5 @@ Compared to the Logarithmic model, the implementation of this model is more comp
 
 To determine the runtime of this model, distinct chunk selection is assumed, so there have to be at least as many chunks as peers, because otherwise chunk duplication can not be prevented. In figure \ref{fig:chunkedswarmformula1} there are just as many chunks as peers, so it takes $T_0$ seconds to transfer all distinct chunks to all peers, because every peer gets a third of the available bandwidth and also has to download a third of the whole data set. Then the peers distribute their chunks among themselves, which takes $\frac{2}{3}\:T_0$ seconds, because every peer uploads its chunk to two other peers. After $T = T_0\:+\:\frac{2}{3}\:T_0$ seconds every peer has all chunks available. Similiary a variable number of peers need $T(n) = T_0\:+\:\frac{n - 1}{n}\:T_0$ seconds. Since $0 \leq \frac{n - 1}{n} \leq 1$ is always true, $T$ never exceeds $2\:T_0$. If the chunk count is doubled, the model behaves even better, because the peers can start to upload their own chunks while they are downloading the next distinct chunks from peer one. This leads to the general formula $T(n, c) = T_0\:+\:\frac{n}{c}\:\frac{n-1}{n}\:T_0 = (1\:+\:\frac{n-1}{c})\:T_0$, where $c = n\:2^i, i \in \mathbb{N}_0$ is the chunk count. As a major disadvantage, the chunk count has to be chosen before the transfer can actually happen. Since the efficiency depends on the $\frac{n-1}{c}$ ratio, the maximal number of peers should be determined before. Without any further optimizations the main objective of this thesis is already fulfilled, as long as the chunk count is equal to or greater than the peer count and no chunk duplication occurs.
 
-If the data set is first separated into parts, which are then segmented into chunks, the data set can be downloaded sequentially, as long as each peer downloads part after part, starting with the first part. Each part then represents a data set as well, which simplifies the implementation of this concept. One domain relying on such a download behavior is video streaming, where peers want to watch the video while downloading it. Unfortunately, this model introduces an initial delay, because the first part has to be downloaded completely before the video can be started. The duration of the delay depends on the number of parts and chunks and on the upload and download bandwidth of each peer. Those parameters should be chosen wisely to reduce this delay as much as possible and thus to improve the quality of service. This concept is further discussed and partially implemented in Chapter \ref{streaming} and \ref{conclusion}.
+If the data set is first separated into parts, which are then segmented into chunks, the data set can be downloaded sequentially, as long as each peer downloads part after part, starting with the first part. Each part then represents a data set as well, which simplifies the implementation of this concept. One domain relying on such a download behavior is video streaming, where peers want to watch the video while downloading it. Unfortunately, this model introduces an initial delay, because the first part has to be downloaded completely before the video can be started. The duration of the delay depends on the number of parts and chunks and on the upload and download bandwidth of each peer. Those parameters should be chosen wisely to reduce this delay as much as possible and thus to improve the quality of service. This concept is further discussed and partially implemented in Chapter \ref{module:streaming} and \ref{conclusion}.
 

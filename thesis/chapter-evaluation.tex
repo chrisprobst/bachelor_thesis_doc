@@ -1,3 +1,427 @@
+%!TEX root = bachelor.tex
+
 \chapter{Evaluation}
 \label{evaluation}
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s1:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_1_default/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s1:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_1_default/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s1:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_1_default/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s1:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_1_default/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s1:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_1_default/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 1 Default}
+		\label{fig:s1}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s2:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_2_seq/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s2:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_2_seq/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+	
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s2:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_2_seq/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+		\subfigure[Completion\label{fig:s2:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_2_seq/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 2 Sequential}
+		\label{fig:s2}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s3:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_3_log/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s3:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_3_log/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s3:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_3_log/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s3:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_3_log/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s3:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_3_log/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 3 Logarithmic}
+		\label{fig:s3}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s4:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_4_peer_count_128/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s4:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_4_peer_count_128/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s4:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_4_peer_count_128/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s4:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_4_peer_count_128/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s4:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_4_peer_count_128/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 4 Peer Count 128}
+		\label{fig:s4}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s5:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s5:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s5:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s5:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s5:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 5 Meta Data 0}
+		\label{fig:s5}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s6:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_6_parts_20/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s6:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_6_parts_20/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s6:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_6_parts_20/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s6:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_6_parts_20/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s6:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_6_parts_20/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 6 Parts 20}
+		\label{fig:s6}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s7:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_7_chunk_count_fac_1/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s7:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_7_chunk_count_fac_1/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s7:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_7_chunk_count_fac_1/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s7:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_7_chunk_count_fac_1/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s7:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_7_chunk_count_fac_1/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 7 Chunk Count Factor 1}
+		\label{fig:s7}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s8:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_8_peer_count_32/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s8:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_8_peer_count_32/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s8:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_8_peer_count_32/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s8:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_8_peer_count_32/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s8:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_8_peer_count_32/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 8 Peer Count 32}
+		\label{fig:s8}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s9:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_9_parts_10/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s9:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_9_parts_10/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s9:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_9_parts_10/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s9:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_9_parts_10/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s9:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_9_parts_10/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 9 Parts 10}
+		\label{fig:s9}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s10:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s10:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s10:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s10:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s10:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 10 Meta Data 10}
+		\label{fig:s10}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s11:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_11_peer_count_192_v2/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s11:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_11_peer_count_192_v2/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s11:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_11_peer_count_192_v2/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s11:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_11_peer_count_192_v2/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s11:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_11_peer_count_192_v2/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 11 Peer Count 192}
+		\label{fig:s11}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s12:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_12_peer_count_256/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s12:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_12_peer_count_256/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s12:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_12_peer_count_256/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s12:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_12_peer_count_256/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s12:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_12_peer_count_256/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 12 Peer Count 256}
+		\label{fig:s12}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s15:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_15_chunk_count_fac_4/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s15:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_15_chunk_count_fac_4/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s15:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_15_chunk_count_fac_4/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s15:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_15_chunk_count_fac_4/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s15:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_15_chunk_count_fac_4/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 15 Chunk Count Factor 4}
+		\label{fig:s15}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s16:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_16_chunk_count_fac_8/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s16:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_16_chunk_count_fac_8/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s16:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_16_chunk_count_fac_8/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s16:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_16_chunk_count_fac_8/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s16:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_16_chunk_count_fac_8/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 16 Chunk Count Factor 8}
+		\label{fig:s16}
+	\end{center}
+\end{figure}
+
+
+
+\pagebreak
+\begin{figure}[ht]
+	\begin{center}
+		\subfigure[Completion\label{fig:s17:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_17_chunk_count_fac_16/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher Download Bandwidth\label{fig:s17:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_17_chunk_count_fac_16/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+
+		\subfigure[Seeder Upload Bandwidth\label{fig:s17:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_17_chunk_count_fac_16/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:s17:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_17_chunk_count_fac_16/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}
+
+		\subfigure[Completion\label{fig:s17:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_17_chunk_count_fac_16/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}~ % No whitespace here!
+		\caption{Scenario 17 Chunk Count Factor 16}
+		\label{fig:s17}
+	\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

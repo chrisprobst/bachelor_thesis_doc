@@ -1,3 +1,4 @@
+%!TEX root = bachelor.tex
 
 \chapter{Modules}
 \label{module}
@@ -19,29 +20,28 @@ Leechers and seeders are associated with one of the multiple distribution algori
 \subsubsection{Automatic Connect}
 \label{module:core:net:autoconnect}
 
+
+
+
 \begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.6\linewidth]{autoconnect}
-	\caption{Seeder Discovery}
-	\label{fig:autoconnect}
+	\begin{center}
+		\subfigure[Seeder Discovery\label{fig:autoconnect}]{
+	 		\includegraphics[width=0.6\textwidth]{autoconnect}
+	 	}
+
+		\subfigure[Reconnect\label{fig:reconnect}]{
+	 		\includegraphics[width=0.6\textwidth]{reconnect}
+	 	}~ % No whitespace here!
+	 	\subfigure[Leecher\,/\,Seeder Mesh\label{fig:mesh}]{
+	 		\includegraphics[width=0.25\textwidth]{mesh}
+	 	}
+
+		\caption{Automatic Connect}
+	\end{center}
 \end{figure}
 
-\begin{figure} [ht]
-	\centering
-	\begin{minipage}[b]{0.6\linewidth}
-		\includegraphics[width=\textwidth]{reconnect}
-		\caption{Reconnect}
-		\label{fig:reconnect}
-	\end{minipage}
-	\hspace{0.1\linewidth}
-	\begin{minipage}[b]{0.25\linewidth}
-		\includegraphics[width=\textwidth]{mesh}
-		\caption{Leecher\,/\,Seeder mesh}
-		\label{fig:mesh}
-	\end{minipage}
-\end{figure}
 
-Figure 5.1 shows in detail how the automatic connect mechanism works. Every leecher has to manually connect to a seeder for the first time, thereafter a leecher is able to automatically connect to other seeders. In order to provide this functionality every leecher, who is coupled with a seeder, announces the address of its coupled seeder to all other seeders it is currently connected with.
+Figure \ref{fig:autoconnect} shows in detail how the automatic connect mechanism works. Every leecher has to manually connect to a seeder for the first time, thereafter a leecher is able to automatically connect to other seeders. In order to provide this functionality every leecher, who is coupled with a seeder, announces the address of its coupled seeder to all other seeders it is currently connected with.
 
 In this scenario leechers one, two and three announce the addresses of their seeders to seeder four, which broadcasts these addresses to all connected leechers. This way the leechers get to know each other and can connect to the remaining seeders. In figure \ref{fig:autoconnect} only the new connections of leecher two are illustrated, though leecher one and three connect to the other seeders as well. This works recursively, so if one of the seeders already has other leechers connected to it, these also will be found. Finally, the topology is just a mesh with $(n\:-\:1)\cdot n$ connections, where $n$ refers to the total number of coupled seeders and leechers and every leecher of each couple is connected to every seeder of all other couples. Figure \ref{fig:mesh} shows this from the point of view of leecher two, which is connected to all others seeders.
 
