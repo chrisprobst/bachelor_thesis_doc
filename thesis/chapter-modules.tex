@@ -6,22 +6,22 @@
 \section{Core-Framework}
 \label{module:core}
 
+The Core-Framework module is the connector module. Any other module is used through this module. It deals with low-level network access and provides a high-level interface for managing Peer-to-Peer networks. It also manages threading and concurrency, which is an important building block of the whole framework. Other modules can only communicate through this module.
+
 \subsection{Network}
 \label{module:core:net}
-The network implementation uses the concept of \emph{leechers} and \emph{seeders}. A leecher connects to one or more seeders and downloads chunks from them. A seeder has multiple leechers connected to it and uploads chunks to them. Chunk transfers are pull-based, so they can only be requested by the leecher, while meta data or address announcements are push-based and thus transferred without being requested. Therefore, every leecher knows exactly what a seeder has to offer without asking, but only requests the chunks it needs. See Section \ref{module:core:net:downloadreq} for more information.
+The network implementation uses the concept of \emph{peers}, \emph{leechers} and \emph{seeders}. A peer is an instance of the framework running on a computer. A leecher and a seeder are network components, which run on a peer. While leechers and seeders are independent of each other, they are not mutually exclusive. A peer usually have both, a leecher and a seeder component. If a leecher and a seeder are running on the same peer, they are considered coupled. 
 
-While leechers and seeders are independent of each other, it is possible to couple them together. A leecher coupled with a seeder always announces the address of its seeder to any other seeder it is connected with. This concept is explained in more detail in Section \ref{module:core:net:autoconnect}.
+A leecher is connected to one or more seeders and downloads chunks from them. A seeder has multiple leechers connected to it and uploads chunks to them. Chunk transfers are pull-based, so they can only be requested by the leecher, while meta data or address announcements are push-based and thus transferred without being requested. Therefore, every leecher knows exactly what a seeder has to offer without asking, but only requests the chunks it needs. See Section \ref{module:core:net:downloadreq} for more information.
+
+A leecher, which is coupled with a seeder, always announces the address of its seeder to any other seeder it is connected with. The automatic connect concept is explained in Section \ref{module:core:net:autoconnect}.
 
 Both, a leecher and a seeder, keep a reference to a database instance. A leecher stores downloaded data in its database and a seeder uploads data from its database. It is possible that both reference the same database instance, so the seeder is able to upload data, which was downloaded by the leecher. The DataBase module and all related concepts are explained in Section \ref{module:database}.
 
 Leechers and seeders are associated with one of the multiple distribution algorithms defined in the Algorithm module. These algorithms determine the distribution behavior, which is further described in Section \ref{module:algorithm}.
 
-
 \subsubsection{Automatic Connect}
 \label{module:core:net:autoconnect}
-
-
-
 
 \begin{figure}[ht]
 	\begin{center}

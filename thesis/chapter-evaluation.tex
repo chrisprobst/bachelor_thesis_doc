@@ -3,7 +3,10 @@
 \chapter{Evaluation}
 \label{evaluation}
 
+This chapter contains the evaluation of the framework. It starts with expectations and the used methodology in Section \ref{evaluation:expectations}. Then, different scenarios are described and evaluated in Section \ref{evaluation:1}, \ref{evaluation:2}, \ref{evaluation:3}. \ref{evaluation:456}, \ref{evaluation:78910} and \ref{evaluation:1112}.
+
 \section{Expectations and Methodology}
+\label{evaluation:expectations}
 
 The efficiency of the different distribution models is already discussed theoretically in Chapter \ref{theory}. While the trade-offs are already known, the implementation of these models can cause unexpected side effects, which could have an impact on performance. The main goal of this evaluation is to verify, that the implementation of the Chunked-Swarm model is able to keep the $2\:T_0$ limit in practice, as predicted in Section \ref{theory:model:chunkedswarm}.
 
@@ -39,7 +42,7 @@ There are twelve scenarios in total. The first scenario is considered the defaul
 
 
 \section{Scenario 1: Default}
-
+\label{evaluation:1}
 
 Scenario 1 simulates 64 peers using the Chunked-Swarm model, as explained in Section \ref{theory:model:chunkedswarm}, with super seeder extension, see Section \ref{module:algorithm:chunkedswarm}, where one peer has the complete data set at the beginning, which is called the super seeder and does only upload each chunk once. Every peer has a simulated upload bandwidth of $16.384\:\frac{bytes}{seconds}$. The download bandwidth is not limited. The size of the data set is not specified directly, but is calculated from the upload bandwidth and $T_0$, which is set to ten minutes (600 seconds). So a single transfer from the super seeder to one peer takes exactly $T_0$ seconds. The small upload bandwidth has a major advantage for benchmarking, because basically it represents the buffer size of each peer. So $n\:*\:u$ is the minimal memory usage of a benchmark, where $n$ is the number of peers and $u$ the upload bandwidth. If the upload bandwidth is too high, the overhead of the memory usage will influence the expressiveness of the benchmark. Since the size of the data set is always relative to the upload bandwidth and $T_0$, the actual upload bandwidth does not matter. The data set is also splitted into twice as many chunks as there are peers, but without the super seeder, which makes $63\:*\:2=126$ chunks. This scenario also simulates a meta data size of one byte. In reality, the meta data would be something about 64 bytes, because it contains a \emph{SHA-1} hash, a bit set and some network protocol headers, but because the upload bandwidth is reduced for the benchmark, the meta data size should be reduced as well. In this special case the $\frac{16.384\:\frac{bytes}{seconds}}{1\:byte}$ ratio is equal to $\frac{1.048.576\:\frac{bytes}{seconds}}{64\:bytes}$. So if we assume, that a usual peer has an upload bandwidth of $1.048.576\:\frac{bytes}{second}$, which is quite common these days, the benchmark values are realistic.
 
@@ -72,6 +75,7 @@ Figure \ref{fig:s1:ssupload} shows the mean super seeder upload bandwidth. For $
 
 \pagebreak
 \section{Scenario 2: Sequential}
+\label{evaluation:2}
 
 Scenario 2 uses the Sequential model, as explained in Section \ref{theory:model:sequential}, so there is only one seeder, which is uploading. This seeder is also called super seeder, though it is not related to the super seeder extension of the Chunked-Swarm model. This super seeder uploads data sets sequentially to all connected peers, which do not distribute these data sets among themselves. This scenario represents a client\,/\,server system, where the upload bandwidth is shared by all connected peers. All other parameters are taken from Scenario 1. As exptected, all peers need approximately $63\:*\:T_0$ seconds to complete the transfer, as shown in figure \ref{fig:s2:completion} and \ref{fig:s2:scompletion}. This makes sense, because every peer can only download with $\frac{16.384}{63}=267\:\frac{bytes}{second}$, while the super seeder uploads at full speed, see figure \ref{fig:s2:download} and \ref{fig:s2:ssupload}. The peaks in the upload and download bandwidth graphs are caused by the leaky-bucket algorithm used by the traffic shaping mechanism, see \ref{module:core:net:traffic}, and have no impact on performance.
 
@@ -104,6 +108,7 @@ Scenario 2 uses the Sequential model, as explained in Section \ref{theory:model:
 
 \pagebreak
 \section{Scenario 3: Logarithmic}
+\label{evaluation:3}
 
 Scenario 3 uses the Logarithmic model. As explained in Section \ref{theory:model:logarithmic}, this model uses a Peer-to-Peer network, like the Chunked-Swarm model, but only complete data sets are tranferred and a single peer only uploads to one other peer in parallel. Only one peer has the complete data set at first, which is also called the super seeder. This way, the number of uploading peers doubles every $T_0$ seconds, so the number of uploading and completed peers grows exponentially, see figure \ref{fig:s3:completion} and \ref{fig:s3:scompletion}. But it also means, that there are never more than 50\,\% of all peers uploading in parallel, which is shown in figure \ref{fig:s3:upload} and \ref{fig:s3:download}. Figure \ref{fig:s3:ssupload} presents the super seeder upload bandwidth including some rough peaks, which are caused by the announce delay. When a peer completes a download, it takes a few seconds to notify the remaining peers in the network. During this time the super seeder is not uploading anything, so these peaks are actually expected. Like Scenario 2, the minor peaks are part of the traffic shaping mechansim.
 
