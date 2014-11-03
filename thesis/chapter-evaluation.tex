@@ -3,7 +3,7 @@
 \chapter{Evaluation}
 \label{evaluation}
 
-\subsubsection{Expectations and Methodology}
+\section{Expectations and Methodology}
 
 The efficiency of the different distribution models is already discussed theoretically in Chapter \ref{theory}. While the trade-offs are already known, the implementation of these models can cause unexpected side effects, which could have an impact on performance. The main goal of this evaluation is to verify, that the implementation of the Chunked-Swarm model is able to keep the $2\:T_0$ limit in practice, as predicted in Section \ref{theory:model:chunkedswarm}.
 
@@ -15,10 +15,10 @@ There are twelve scenarios in total. The first scenario is considered the defaul
 
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s1:completion}]{
+		\subfigure[Completion Process\label{fig:s1:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_1_default/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s1:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s1:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_1_default/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -38,7 +38,7 @@ There are twelve scenarios in total. The first scenario is considered the defaul
 \end{figure}
 
 
-\subsubsection{Scenario 1: Default}
+\section{Scenario 1: Default}
 
 
 Scenario 1 simulates 64 peers using the Chunked-Swarm model, as explained in Section \ref{theory:model:chunkedswarm}, with super seeder extension, see Section \ref{module:algorithm:chunkedswarm}, where one peer has the complete data set at the beginning, which is called the super seeder and does only upload each chunk once. Every peer has a simulated upload bandwidth of $16.384\:\frac{bytes}{seconds}$. The download bandwidth is not limited. The size of the data set is not specified directly, but is calculated from the upload bandwidth and $T_0$, which is set to ten minutes (600 seconds). So a single transfer from the super seeder to one peer takes exactly $T_0$ seconds. The small upload bandwidth has a major advantage for benchmarking, because basically it represents the buffer size of each peer. So $n\:*\:u$ is the minimal memory usage of a benchmark, where $n$ is the number of peers and $u$ the upload bandwidth. If the upload bandwidth is too high, the overhead of the memory usage will influence the expressiveness of the benchmark. Since the size of the data set is always relative to the upload bandwidth and $T_0$, the actual upload bandwidth does not matter. The data set is also splitted into twice as many chunks as there are peers, but without the super seeder, which makes $63\:*\:2=126$ chunks. This scenario also simulates a meta data size of one byte. In reality, the meta data would be something about 64 bytes, because it contains a \emph{SHA-1} hash, a bit set and some network protocol headers, but because the upload bandwidth is reduced for the benchmark, the meta data size should be reduced as well. In this special case the $\frac{16.384\:\frac{bytes}{seconds}}{1\:byte}$ ratio is equal to $\frac{1.048.576\:\frac{bytes}{seconds}}{64\:bytes}$. So if we assume, that a usual peer has an upload bandwidth of $1.048.576\:\frac{bytes}{second}$, which is quite common these days, the benchmark values are realistic.
@@ -51,10 +51,10 @@ Figure \ref{fig:s1:ssupload} shows the mean super seeder upload bandwidth. For $
 
 \begin{figure}[ht]
 	\begin{center}
-		\subfigure[Completion\label{fig:s2:completion}]{
+		\subfigure[Completion Process\label{fig:s2:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_2_seq/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion\label{fig:s2:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s2:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_2_seq/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}	 	
 
@@ -71,7 +71,7 @@ Figure \ref{fig:s1:ssupload} shows the mean super seeder upload bandwidth. For $
 \end{figure}
 
 \pagebreak
-\subsubsection{Scenario 2: Sequential}
+\section{Scenario 2: Sequential}
 
 Scenario 2 uses the Sequential model, as explained in Section \ref{theory:model:sequential}, so there is only one seeder, which is uploading. This seeder is also called super seeder, though it is not related to the super seeder extension of the Chunked-Swarm model. This super seeder uploads data sets sequentially to all connected peers, which do not distribute these data sets among themselves. This scenario represents a client\,/\,server system, where the upload bandwidth is shared by all connected peers. All other parameters are taken from Scenario 1. As exptected, all peers need approximately $63\:*\:T_0$ seconds to complete the transfer, as shown in figure \ref{fig:s2:completion} and \ref{fig:s2:scompletion}. This makes sense, because every peer can only download with $\frac{16.384}{63}=267\:\frac{bytes}{second}$, while the super seeder uploads at full speed, see figure \ref{fig:s2:download} and \ref{fig:s2:ssupload}. The peaks in the upload and download bandwidth graphs are caused by the leaky-bucket algorithm used by the traffic shaping mechanism, see \ref{module:core:net:traffic}, and have no impact on performance.
 
@@ -80,10 +80,10 @@ Scenario 2 uses the Sequential model, as explained in Section \ref{theory:model:
 
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s3:completion}]{
+		\subfigure[Completion Process\label{fig:s3:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_3_log/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s3:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s3:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_3_log/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -103,9 +103,9 @@ Scenario 2 uses the Sequential model, as explained in Section \ref{theory:model:
 \end{figure}
 
 \pagebreak
-\subsubsection{Scenario 3: Logarithmic}
+\section{Scenario 3: Logarithmic}
 
-Scenario 3 uses the Logarithmic model. As explained in Section \ref{theory:model:logarithmic}, this model uses a peer-to-peer network, like the Chunked-Swarm model, but only complete data sets are tranferred and a single peer only uploads to one other peer in parallel. Only one peer has the complete data set at first, which is also called the super seeder. This way, the number of uploading peers doubles every $T_0$ seconds, so the number of uploading and completed peers grows exponentially, see figure \ref{fig:s3:completion} and \ref{fig:s3:scompletion}. But it also means, that there are never more than 50\,\% of all peers uploading in parallel, which is shown in figure \ref{fig:s3:upload} and \ref{fig:s3:download}. Figure \ref{fig:s3:ssupload} presents the super seeder upload bandwidth including some rough peaks, which are caused by the announce delay. When a peer completes a download, it takes a few seconds to notify the remaining peers in the network. During this time the super seeder is not uploading anything, so these peaks are actually expected. Like Scenario 2, the minor peaks are part of the traffic shaping mechansim.
+Scenario 3 uses the Logarithmic model. As explained in Section \ref{theory:model:logarithmic}, this model uses a Peer-to-Peer network, like the Chunked-Swarm model, but only complete data sets are tranferred and a single peer only uploads to one other peer in parallel. Only one peer has the complete data set at first, which is also called the super seeder. This way, the number of uploading peers doubles every $T_0$ seconds, so the number of uploading and completed peers grows exponentially, see figure \ref{fig:s3:completion} and \ref{fig:s3:scompletion}. But it also means, that there are never more than 50\,\% of all peers uploading in parallel, which is shown in figure \ref{fig:s3:upload} and \ref{fig:s3:download}. Figure \ref{fig:s3:ssupload} presents the super seeder upload bandwidth including some rough peaks, which are caused by the announce delay. When a peer completes a download, it takes a few seconds to notify the remaining peers in the network. During this time the super seeder is not uploading anything, so these peaks are actually expected. Like Scenario 2, the minor peaks are part of the traffic shaping mechansim.
 
 \vfill
 
@@ -113,10 +113,10 @@ Scenario 3 uses the Logarithmic model. As explained in Section \ref{theory:model
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s4:completion}]{
+		\subfigure[Completion Process\label{fig:s4:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_8_peer_count_32/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s4:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s4:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_8_peer_count_32/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -139,10 +139,10 @@ Scenario 3 uses the Logarithmic model. As explained in Section \ref{theory:model
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s5:completion}]{
+		\subfigure[Completion Process\label{fig:s5:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_4_peer_count_128/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s5:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s5:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_4_peer_count_128/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -165,10 +165,10 @@ Scenario 3 uses the Logarithmic model. As explained in Section \ref{theory:model
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s6:completion}]{
+		\subfigure[Completion Process\label{fig:s6:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_11_peer_count_192_v2/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s6:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s6:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_11_peer_count_192_v2/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -189,7 +189,8 @@ Scenario 3 uses the Logarithmic model. As explained in Section \ref{theory:model
 \vfill
 
 \pagebreak
-\subsubsection{Scenario 4, 5 and 6: Peer Count}
+\section{Scenario 4, 5 and 6: Peer Count}
+\label{evaluation:456}
 
 Compared to the default scenario, scenario 4, 5 and 6 have a peer count of 32, 128 and 192 respectively. These scenarios are used to observe the large-scale behavior, whose results are shown in figure \ref{fig:s4}, \ref{fig:s5} and \ref{fig:s6}. The results from scenario 4 and the default scenario are almost identical, actually scenario 4 behaves even more as predicted. In contrast, scenario 5 and 6 show a minor decrease in performance. While the default scenario and scenario 4 both take about $1.5\:*\:T_0$ seconds, scenario 5 and 6 take $1.6\:*\:T_0$ and $1.7\:*\:T_0$ seconds respectively. While all of these scenarios do not exceed $2\:*\:T_0$ seconds, the performance obviously drops when using more peers.
 
@@ -206,10 +207,10 @@ It should be noted, that the limit is not exactly 192 peers. When simulating 192
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s7:completion}]{
+		\subfigure[Completion Process\label{fig:s7:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_7_chunk_count_fac_1/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s7:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s7:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_7_chunk_count_fac_1/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -232,10 +233,10 @@ It should be noted, that the limit is not exactly 192 peers. When simulating 192
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s8:completion}]{
+		\subfigure[Completion Process\label{fig:s8:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_15_chunk_count_fac_4/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s8:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s8:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_15_chunk_count_fac_4/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -258,10 +259,10 @@ It should be noted, that the limit is not exactly 192 peers. When simulating 192
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s9:completion}]{
+		\subfigure[Completion Process\label{fig:s9:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_16_chunk_count_fac_8/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s9:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s9:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_16_chunk_count_fac_8/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -285,10 +286,10 @@ It should be noted, that the limit is not exactly 192 peers. When simulating 192
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s10:completion}]{
+		\subfigure[Completion Process\label{fig:s10:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_17_chunk_count_fac_16/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s10:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s10:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_17_chunk_count_fac_16/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -309,7 +310,8 @@ It should be noted, that the limit is not exactly 192 peers. When simulating 192
 \vfill
 
 \pagebreak
-\subsubsection{Scenario 7, 8, 9 and 10: Chunk Count Factor}
+\section{Scenario 7, 8, 9 and 10: Chunk Count Factor}
+\label{evaluation:78910}
 
 In scenario 7, 8, 9 and 10 the chunk count factor is adjusted to 1, 4, 8 and 16 respectively. The chunk count factor is multiplied with the number of peers, but without the super seeder, to calculate the actual chunk count. The default scenario uses a chunk count factor of 2 and a peer count of 63, without the super seeder. Since these four scenarios only change the chunk count factor, the used chunk counts are $1\:*\:63$, $4\:*\:63=252$, $8\:*\:63=504$ and $16\:*\:63=1008$ for scenario 7, 8, 9 and 10 respectively.   
 
@@ -327,10 +329,10 @@ In theory, if the chunk count is doubled, the completion time after $T_0$ will c
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s11:completion}]{
+		\subfigure[Completion Process\label{fig:s11:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_9_parts_10/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s11:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s11:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_9_parts_10/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -354,10 +356,10 @@ In theory, if the chunk count is doubled, the completion time after $T_0$ will c
 \pagebreak
 \begin{figure}[!ht]
 	\begin{center}	
-		\subfigure[Completion\label{fig:s12:completion}]{
+		\subfigure[Completion Process\label{fig:s12:completion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_6_parts_20/plots/GeneratedMeanChunkCompletion.csv}
 	 	}~ % No whitespace here!
-	 	\subfigure[Completion Per Peer\label{fig:s12:scompletion}]{
+	 	\subfigure[Sorted Completion\label{fig:s12:scompletion}]{
 	 		\includegraphics[width=0.5\textwidth]{plots/scenario_6_parts_20/plots/GeneratedMeanSortedChunkCompletion.csv}
 	 	}		
 
@@ -378,7 +380,8 @@ In theory, if the chunk count is doubled, the completion time after $T_0$ will c
 \vfill
 
 \pagebreak
-\subsubsection{Scenario 11 and 12: Streaming Multiple Data Sets}
+\section{Scenario 11 and 12: Streaming Multiple Data Sets}
+\label{evaluation:1112}
 
 So far, all other scenarios used and transferred only one data set. The last scenarios 11 and 12 implement the streaming of 10 and 20 data sets respectively, see Section \ref{theory:model:chunkedswarm} and \ref{module:streaming}. The data sets are much smaller now and thus complete in less time.
 

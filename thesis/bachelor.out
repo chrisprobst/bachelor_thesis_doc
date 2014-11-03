@@ -27,5 +27,12 @@
 \BOOKMARK [1][-]{section.5.4}{5.4 Monitoring, Record-Viewer and Benchmark}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.5}{5.5 Streaming}{chapter.5}% 28
 \BOOKMARK [0][-]{chapter.6}{6 Evaluation}{}% 29
-\BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 30
-\BOOKMARK [0][-]{chapter*.19}{Bibliography}{}% 31
+\BOOKMARK [1][-]{section.6.1}{6.1 Expectations and Methodology}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.2}{6.2 Scenario 1: Default}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.3}{6.3 Scenario 2: Sequential}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.4}{6.4 Scenario 3: Logarithmic}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.5}{6.5 Scenario 4, 5 and 6: Peer Count}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.6}{6.6 Scenario 7, 8, 9 and 10: Chunk Count Factor}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.7}{6.7 Scenario 11 and 12: Streaming Multiple Data Sets}{chapter.6}% 36
+\BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 37
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 38

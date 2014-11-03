@@ -51,6 +51,7 @@ If a leecher loses, for some reason, the connection to a seeder, the framework i
 
 
 \subsubsection{Meta Data Announcements}
+\label{module:core:net:annoucements}
 After a leecher connected to a seeder, the leecher does not know, which data sets the seeder offers. As previously explained in Section \ref{module:core:net:autoconnect}, leechers discover new seeders through seeders they are already connected with. The way a leecher collects knowledge about the data sets a seeder offers works in a similar way. A seeder announces periodically its data sets to all connected leechers. It basically transfers a list of meta data, which is explained further in Section \ref{module:database:metadata}, so every leecher can update its knowledge about this seeder. The list of meta data can be modified by the used distribution algorithm before it is announced to model a specific distribution behavior. Section \ref{module:algorithm} outlines this mechanism.
 
 An optimization uses a lazy transmission approach, thus a seeder will only transfer meta data, if it has changed. So if a data set does not change at all, a seeder will never transfer a second announcement of this data set. Another optimization causes the seeder not to transfer any announcements to leechers, which the seeder is uploading data to. This feature is further explained in the following Section \ref{module:core:net:downloadreq}.
@@ -62,8 +63,7 @@ After a leecher successfully connected to one or more seeders and has already re
 
 Since downloading more than one chunk at a time from the same seeder is not faster than downloading them sequentially, only one download per seeder at a time is allowed, which also reduces protocol complexity. Because of that, during a chunk download meta data and address announcements are not transferred, because these are obviously of no interest for the leecher. As soon as the chunk download completes, outstanding announcements will be bundled and transferred.
 
-A seeder is allowed to decide whether a chunk request is valid or not, which means depending on the algorithm the seeder can reject a chunk request. If a seeder rejects a chunk request the leecher will not request the same chunk again. The seeder can tell the leecher, that a previously rejected chunk request is valid again by reannouncing this specific chunk. This way complex distribution behavior
-can easily be implemented.
+A seeder is allowed to decide whether a chunk request is valid or not, which means depending on the algorithm the seeder can reject a chunk request. If a seeder rejects a chunk request the leecher will not request the same chunk again. The seeder can tell the leecher, that a previously rejected chunk request is valid again by reannouncing this specific chunk. This way complex distribution behavior can easily be implemented.
 
 
 \subsubsection{Nonblocking I/O}
