@@ -1,0 +1,56 @@
+%!TEX root = bachelor.tex
+
+\appendix
+\chapter{Scenario 13 and 14}
+\label{appendix1}
+
+The following figure \ref{fig:appendix:s1} and \ref{fig:appendix:s2} contain the results from scenario 13 and 14, which use a meta data size of 0 and 10 bytes respectively. The results are not part of the evaluation, because they are almost identical to those of the default scenario, see \ref{fig:s1}.
+
+\begin{figure}[!ht]
+	\begin{center}	
+		\subfigure[Completion Process\label{fig:appendix:s1:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Sorted Completion\label{fig:appendix:s1:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}		
+
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:appendix:s1:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Seeder Upload Bandwidth\label{fig:appendix:s1:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}
+
+	 	\subfigure[Leecher Download Bandwidth\label{fig:appendix:s1:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_5_meta_data_0/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+		\caption{Scenario 13 - Meta Data 0}
+		\label{fig:appendix:s1}
+	\end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+	\begin{center}	
+		\subfigure[Completion Process\label{fig:appendix:s2:completion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanChunkCompletion.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Sorted Completion\label{fig:appendix:s2:scompletion}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanSortedChunkCompletion.csv}
+	 	}		
+
+	 	\subfigure[Super Seeder Upload Bandwidth\label{fig:appendix:s2:ssupload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanCurrentSuperSeederUploadBandwidth.csv}
+	 	}~ % No whitespace here!
+	 	\subfigure[Seeder Upload Bandwidth\label{fig:appendix:s2:upload}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanCurrentUploadBandwidth.csv}
+	 	}
+
+	 	\subfigure[Leecher Download Bandwidth\label{fig:appendix:s2:download}]{
+	 		\includegraphics[width=0.5\textwidth]{plots/scenario_10_meta_data_10/plots/GeneratedMeanCurrentDownloadBandwidth.csv}
+	 	}
+		\caption{Scenario 14 - Meta Data 10}
+		\label{fig:appendix:s2}
+	\end{center}
+\end{figure}
+

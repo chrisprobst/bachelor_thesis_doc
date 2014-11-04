@@ -11,6 +11,11 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex-references.bib
+I was expecting a `,' or a `}'---line 5 of file bibtex-references.bib
+ :   
+ :   url = {http://netty.io/wiki/user-guide-for-5.x.html}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 You've used 0 entries,
             4857 wiz_defined-function locations,
             900 strings with 6364 characters,
@@ -52,4 +57,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 7
-(There was 1 error message)
+(There were 2 error messages)

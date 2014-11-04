@@ -39,4 +39,5 @@
 \contentsline {section}{\numberline {5.6}Scenario 7, 8, 9 and 10: Chunk Count Factor}{35}{section.5.6}
 \contentsline {section}{\numberline {5.7}Scenario 11 and 12: Streaming Multiple Data Sets}{38}{section.5.7}
 \contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}
-\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.12}
+\contentsline {chapter}{\numberline {A}Scenario 13 and 14}{41}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{45}{appendix*.12}
