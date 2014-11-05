@@ -111,7 +111,7 @@ To use more than one thread, Netty simply spawns more event loops, typically jus
 These event loops can then run theoretically in parallel, because the underlying operating system distributes busy threads equally among all available cores. But using more than one thread is only the tip of the iceberg, multiple threads introduce a whole new category of problems and considerations, which have to be taken into account and are discussed in the next Section \ref{module:core:conc:lockfree}.
 
 
-\subsubsection{Lock-Free Progamming}
+\subsubsection{Lock-Free Programming}
 \label{module:core:conc:lockfree}
 The main problem using multiple threads is the question of how these threads interact which each other. If two threads access the same variable without any protection, the resulting behavior is not always defined and can lead to untraceable bugs. The unprotected access of variables is called a \emph{race condition} or \emph{critical-section}.
 
