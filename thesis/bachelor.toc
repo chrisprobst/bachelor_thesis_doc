@@ -29,14 +29,13 @@
 \contentsline {subsection}{\numberline {4.3.2}Algorithm: Chunked-Swarm}{20}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Monitoring, Record-Viewer and Benchmark}{21}{section.4.4}
 \contentsline {section}{\numberline {4.5}Streaming}{22}{section.4.5}
-\contentsline {chapter}{\numberline {5}Evaluation}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Expectations and Methodology}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Scenario 1: Default}{25}{section.5.2}
-\contentsline {section}{\numberline {5.3}Scenario 2: Sequential}{28}{section.5.3}
-\contentsline {section}{\numberline {5.4}Scenario 3: Logarithmic}{30}{section.5.4}
-\contentsline {section}{\numberline {5.5}Scenario 4, 5 and 6: Peer Count}{34}{section.5.5}
-\contentsline {section}{\numberline {5.6}Scenario 7, 8, 9 and 10: Chunk Count Factor}{39}{section.5.6}
-\contentsline {section}{\numberline {5.7}Scenario 11 and 12: Streaming Multiple Data Sets}{42}{section.5.7}
-\contentsline {chapter}{\numberline {6}Conclusion}{43}{chapter.6}
-\contentsline {chapter}{\numberline {A}Scenario 13 and 14}{45}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{49}{appendix*.11}
+\contentsline {chapter}{\numberline {5}Evaluation}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Expectations and Methodology}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Scenario 1: Default}{27}{section.5.2}
+\contentsline {section}{\numberline {5.3}Scenario 2: Sequential}{30}{section.5.3}
+\contentsline {section}{\numberline {5.4}Scenario 3: Logarithmic}{32}{section.5.4}
+\contentsline {section}{\numberline {5.5}Scenario 4, 5 and 6: Peer Count}{36}{section.5.5}
+\contentsline {section}{\numberline {5.6}Scenario 7, 8, 9 and 10: Chunk Count Factor}{41}{section.5.6}
+\contentsline {section}{\numberline {5.7}Scenario 11 and 12: Streaming Multiple Data Sets}{44}{section.5.7}
+\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}
+\contentsline {chapter}{\numberline {A}Scenario 13 and 14}{47}{appendix.A}
