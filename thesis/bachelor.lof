@@ -9,95 +9,95 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Distribution B}}}{5}{figure.2.4}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Complete Distribution}}}{5}{figure.2.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Software Architecture}}{7}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Software Architecture}}{9}{figure.3.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Automatic Connect}}{10}{figure.4.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Seeder Discovery}}}{10}{figure.4.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reconnect}}}{10}{figure.4.1}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Leecher\tmspace +\thinmuskip {.1667em}/\tmspace +\thinmuskip {.1667em}Seeder Mesh}}}{10}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Automatic Connect}}{12}{figure.4.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Seeder Discovery}}}{12}{figure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reconnect}}}{12}{figure.4.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Leecher\tmspace +\thinmuskip {.1667em}/\tmspace +\thinmuskip {.1667em}Seeder Mesh}}}{12}{figure.4.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Scenario 1 - Default}}{22}{figure.5.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{22}{figure.5.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{22}{figure.5.1}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{22}{figure.5.1}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{22}{figure.5.1}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{22}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Scenario 2 - Sequential}}{24}{figure.5.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{24}{figure.5.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{24}{figure.5.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Leecher Download Bandwidth}}}{24}{figure.5.2}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{24}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Scenario 3 - Logarithmic}}{25}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{25}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{25}{figure.5.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{25}{figure.5.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{25}{figure.5.3}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{25}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Scenario 4 - 32 Peers}}{27}{figure.5.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{27}{figure.5.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{27}{figure.5.4}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{27}{figure.5.4}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{27}{figure.5.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{27}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Scenario 5 - 128 Peers}}{28}{figure.5.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{28}{figure.5.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{28}{figure.5.5}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{28}{figure.5.5}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{28}{figure.5.5}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{28}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Scenario 6 - 192 Peers}}{29}{figure.5.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{29}{figure.5.6}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{29}{figure.5.6}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{29}{figure.5.6}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{29}{figure.5.6}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{29}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Scenario 7 - Chunk Count Factor 1}}{31}{figure.5.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{31}{figure.5.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{31}{figure.5.7}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{31}{figure.5.7}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{31}{figure.5.7}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{31}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Scenario 8 - Chunk Count Factor 4}}{32}{figure.5.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{32}{figure.5.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{32}{figure.5.8}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{32}{figure.5.8}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{32}{figure.5.8}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{32}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Scenario 9 - Chunk Count Factor 8}}{33}{figure.5.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{33}{figure.5.9}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{33}{figure.5.9}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{33}{figure.5.9}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{33}{figure.5.9}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{33}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Scenario 10 - Chunk Count Factor 16}}{34}{figure.5.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{34}{figure.5.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{34}{figure.5.10}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{34}{figure.5.10}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{34}{figure.5.10}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{34}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Scenario 11 - Streaming 10 Data Sets}}{36}{figure.5.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{36}{figure.5.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{36}{figure.5.11}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{36}{figure.5.11}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{36}{figure.5.11}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{36}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Scenario 12 - Streaming 20 Data Sets}}{37}{figure.5.12}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{37}{figure.5.12}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{37}{figure.5.12}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{37}{figure.5.12}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{37}{figure.5.12}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{37}{figure.5.12}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Scenario 1 - Default}}{24}{figure.5.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{24}{figure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{24}{figure.5.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{24}{figure.5.1}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{24}{figure.5.1}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{24}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Scenario 2 - Sequential}}{27}{figure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{27}{figure.5.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{27}{figure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Leecher Download Bandwidth}}}{27}{figure.5.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{27}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Scenario 3 - Logarithmic}}{29}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{29}{figure.5.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{29}{figure.5.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{29}{figure.5.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{29}{figure.5.3}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{29}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Scenario 4 - 32 Peers}}{31}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{31}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{31}{figure.5.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{31}{figure.5.4}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{31}{figure.5.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{31}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Scenario 5 - 128 Peers}}{32}{figure.5.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{32}{figure.5.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{32}{figure.5.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{32}{figure.5.5}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{32}{figure.5.5}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{32}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Scenario 6 - 192 Peers}}{33}{figure.5.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{33}{figure.5.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{33}{figure.5.6}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{33}{figure.5.6}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{33}{figure.5.6}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{33}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Scenario 7 - Chunk Count Factor 1}}{35}{figure.5.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{35}{figure.5.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{35}{figure.5.7}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{35}{figure.5.7}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{35}{figure.5.7}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{35}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Scenario 8 - Chunk Count Factor 4}}{36}{figure.5.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{36}{figure.5.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{36}{figure.5.8}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{36}{figure.5.8}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{36}{figure.5.8}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{36}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Scenario 9 - Chunk Count Factor 8}}{37}{figure.5.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{37}{figure.5.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{37}{figure.5.9}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{37}{figure.5.9}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{37}{figure.5.9}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{37}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Scenario 10 - Chunk Count Factor 16}}{38}{figure.5.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{38}{figure.5.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{38}{figure.5.10}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{38}{figure.5.10}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{38}{figure.5.10}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{38}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Scenario 11 - Streaming 10 Data Sets}}{40}{figure.5.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{40}{figure.5.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{40}{figure.5.11}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{40}{figure.5.11}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{40}{figure.5.11}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{40}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Scenario 12 - Streaming 20 Data Sets}}{41}{figure.5.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{41}{figure.5.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{41}{figure.5.12}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{41}{figure.5.12}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{41}{figure.5.12}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{41}{figure.5.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Scenario 13 - Meta Data 0}}{42}{figure.A.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{42}{figure.A.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{42}{figure.A.1}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{42}{figure.A.1}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{42}{figure.A.1}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{42}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Scenario 14 - Meta Data 10}}{43}{figure.A.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{43}{figure.A.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{43}{figure.A.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{43}{figure.A.2}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{43}{figure.A.2}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{43}{figure.A.2}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Scenario 13 - Meta Data 0}}{46}{figure.A.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{46}{figure.A.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{46}{figure.A.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{46}{figure.A.1}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{46}{figure.A.1}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{46}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Scenario 14 - Meta Data 10}}{47}{figure.A.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Completion Process}}}{47}{figure.A.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sorted Completion}}}{47}{figure.A.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Super Seeder Upload Bandwidth}}}{47}{figure.A.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Seeder Upload Bandwidth}}}{47}{figure.A.2}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Leecher Download Bandwidth}}}{47}{figure.A.2}

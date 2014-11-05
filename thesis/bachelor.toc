@@ -1,6 +1,5 @@
 \select@language {english}
 \contentsline {chapter}{\nonumberline List of Figures}{ix}{chapter*.2}
-\contentsline {chapter}{\nonumberline List of Tables}{xi}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem and Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Objective}{2}{section.1.2}
@@ -8,36 +7,36 @@
 \contentsline {chapter}{\numberline {2}Theory}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Model: Sequential}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Model: Logarithmic}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Model: Chunked-Swarm}{5}{section.2.3}
-\contentsline {chapter}{\numberline {3}Architecture}{7}{chapter.3}
-\contentsline {chapter}{\numberline {4}Modules}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}Core-Framework}{9}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Network}{9}{subsection.4.1.1}
-\contentsline {subsubsection}{\nonumberline Automatic Connect}{10}{section*.4}
-\contentsline {subsubsection}{\nonumberline Meta Data Announcements}{11}{section*.5}
-\contentsline {subsubsection}{\nonumberline Download Requests}{12}{section*.6}
-\contentsline {subsubsection}{\nonumberline Nonblocking I/O}{12}{section*.7}
-\contentsline {subsubsection}{\nonumberline Transport: In-VM and TCP}{13}{section*.8}
-\contentsline {subsubsection}{\nonumberline Traffic-Shaping}{13}{section*.9}
-\contentsline {subsection}{\numberline {4.1.2}Concurrency}{14}{subsection.4.1.2}
-\contentsline {subsubsection}{\nonumberline Event-Loop}{14}{section*.10}
-\contentsline {subsubsection}{\nonumberline Lock-Free Progamming}{15}{section*.11}
-\contentsline {section}{\numberline {4.2}DataBase}{16}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Meta Data}{16}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Backends: Emulated, In-Memory and Persistent}{16}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Algorithm}{17}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Algorithms: Sequential and Logarithmic}{17}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Algorithm: Chunked-Swarm}{18}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Monitoring, Record-Viewer and Benchmark}{19}{section.4.4}
-\contentsline {section}{\numberline {4.5}Streaming}{20}{section.4.5}
-\contentsline {chapter}{\numberline {5}Evaluation}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Expectations and Methodology}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Scenario 1: Default}{23}{section.5.2}
-\contentsline {section}{\numberline {5.3}Scenario 2: Sequential}{24}{section.5.3}
-\contentsline {section}{\numberline {5.4}Scenario 3: Logarithmic}{26}{section.5.4}
-\contentsline {section}{\numberline {5.5}Scenario 4, 5 and 6: Peer Count}{30}{section.5.5}
-\contentsline {section}{\numberline {5.6}Scenario 7, 8, 9 and 10: Chunk Count Factor}{35}{section.5.6}
-\contentsline {section}{\numberline {5.7}Scenario 11 and 12: Streaming Multiple Data Sets}{38}{section.5.7}
-\contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}
-\contentsline {chapter}{\numberline {A}Scenario 13 and 14}{41}{appendix.A}
-\contentsline {chapter}{\nonumberline Bibliography}{45}{appendix*.12}
+\contentsline {section}{\numberline {2.3}Model: Chunked-Swarm}{6}{section.2.3}
+\contentsline {chapter}{\numberline {3}Architecture}{9}{chapter.3}
+\contentsline {chapter}{\numberline {4}Modules}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Core-Framework}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Network}{11}{subsection.4.1.1}
+\contentsline {subsubsection}{\nonumberline Automatic Connect}{13}{section*.3}
+\contentsline {subsubsection}{\nonumberline Meta Data Announcements}{13}{section*.4}
+\contentsline {subsubsection}{\nonumberline Download Requests}{14}{section*.5}
+\contentsline {subsubsection}{\nonumberline Nonblocking I/O}{14}{section*.6}
+\contentsline {subsubsection}{\nonumberline Transport: In-VM and TCP}{15}{section*.7}
+\contentsline {subsubsection}{\nonumberline Traffic-Shaping}{15}{section*.8}
+\contentsline {subsection}{\numberline {4.1.2}Concurrency}{16}{subsection.4.1.2}
+\contentsline {subsubsection}{\nonumberline Event-Loop}{17}{section*.9}
+\contentsline {subsubsection}{\nonumberline Lock-Free Progamming}{17}{section*.10}
+\contentsline {section}{\numberline {4.2}DataBase}{18}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Meta Data}{18}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Backends: Emulated, In-Memory and Persistent}{19}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Algorithm}{19}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Algorithms: Sequential and Logarithmic}{20}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Algorithm: Chunked-Swarm}{20}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Monitoring, Record-Viewer and Benchmark}{21}{section.4.4}
+\contentsline {section}{\numberline {4.5}Streaming}{22}{section.4.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Expectations and Methodology}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Scenario 1: Default}{25}{section.5.2}
+\contentsline {section}{\numberline {5.3}Scenario 2: Sequential}{28}{section.5.3}
+\contentsline {section}{\numberline {5.4}Scenario 3: Logarithmic}{30}{section.5.4}
+\contentsline {section}{\numberline {5.5}Scenario 4, 5 and 6: Peer Count}{34}{section.5.5}
+\contentsline {section}{\numberline {5.6}Scenario 7, 8, 9 and 10: Chunk Count Factor}{39}{section.5.6}
+\contentsline {section}{\numberline {5.7}Scenario 11 and 12: Streaming Multiple Data Sets}{42}{section.5.7}
+\contentsline {chapter}{\numberline {6}Conclusion}{43}{chapter.6}
+\contentsline {chapter}{\numberline {A}Scenario 13 and 14}{45}{appendix.A}
+\contentsline {chapter}{\nonumberline Bibliography}{49}{appendix*.11}

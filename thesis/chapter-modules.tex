@@ -6,24 +6,19 @@
 \section{Core-Framework}
 \label{module:core}
 
-The Core-Framework module is the connector module. Any other module is used through this module. It deals with low-level network access and provides a high-level interface for managing Peer-to-Peer networks. It also manages threading and concurrency, which is an important building block of the whole framework. Other modules can only communicate through this module.
+The Core-Framework module is the connector module. Any other module is used through this module. It deals with low-level network access and provides a high-level interface for managing Peer-to-Peer networks. It also manages threading and concurrency, which is an important building block for the whole framework. Other modules can only communicate through this module.
 
 \subsection{Network}
 \label{module:core:net}
-The network implementation uses the concept of \emph{peers}, \emph{leechers} and \emph{seeders}. A peer is an instance of the framework running on a computer. A leecher and a seeder are network components, which run on a peer. While leechers and seeders are independent of each other, they are not mutually exclusive. A peer usually have both, a leecher and a seeder component. If a leecher and a seeder are running on the same peer, they are considered coupled. 
+The network implementation uses the concept of \emph{peers}, \emph{leechers} and \emph{seeders}. A peer is an instance of the framework running on a computer. A leecher and a seeder are network components, which run on a peer. While leechers and seeders are independent of each other, they are not mutually exclusive. A peer usually has both, a leecher and a seeder component. If a leecher and a seeder are running on the same peer, they are considered coupled. 
 
 A leecher is connected to one or more seeders and downloads chunks from them. A seeder has multiple leechers connected to it and uploads chunks to them. Chunk transfers are pull-based, so they can only be requested by the leecher, while meta data or address announcements are push-based and thus transferred without being requested. Therefore, every leecher knows exactly what a seeder has to offer without asking, but only requests the chunks it needs. See Section \ref{module:core:net:downloadreq} for more information.
 
 A leecher, which is coupled with a seeder, always announces the address of its seeder to any other seeder it is connected with. The automatic connect concept is explained in Section \ref{module:core:net:autoconnect}.
 
-Both, a leecher and a seeder, keep a reference to a database instance. A leecher stores downloaded data in its database and a seeder uploads data from its database. It is possible that both reference the same database instance, so the seeder is able to upload data, which was downloaded by the leecher. The DataBase module and all related concepts are explained in Section \ref{module:database}.
+\pagebreak
 
-Leechers and seeders are associated with one of the multiple distribution algorithms defined in the Algorithm module. These algorithms determine the distribution behavior, which is further described in Section \ref{module:algorithm}.
-
-\subsubsection{Automatic Connect}
-\label{module:core:net:autoconnect}
-
-\begin{figure}[ht]
+\begin{figure}[t]
 	\begin{center}
 		\subfigure[Seeder Discovery\label{fig:autoconnect}]{
 	 		\includegraphics[width=0.6\textwidth]{autoconnect}
@@ -40,14 +35,22 @@ Leechers and seeders are associated with one of the multiple distribution algori
 	\end{center}
 \end{figure}
 
+Both, a leecher and a seeder, keep a reference to a database instance. A leecher stores downloaded data in its database and a seeder uploads data from its database. It is possible that both reference the same database instance, so the seeder is able to upload data, which was downloaded by the leecher. The DataBase module and all related concepts are explained in Section \ref{module:database}.
 
-Figure \ref{fig:autoconnect} shows in detail how the automatic connect mechanism works. Every leecher has to manually connect to a seeder for the first time, thereafter a leecher is able to automatically connect to other seeders. In order to provide this functionality every leecher, who is coupled with a seeder, announces the address of its coupled seeder to all other seeders it is currently connected with.
+Leechers and seeders are associated with one of the multiple distribution algorithms defined in the Algorithm module. These algorithms determine the distribution behavior, which is further described in Section \ref{module:algorithm}.
 
-In this scenario leechers one, two and three announce the addresses of their seeders to seeder four, which broadcasts these addresses to all connected leechers. This way the leechers get to know each other and can connect to the remaining seeders. In figure \ref{fig:autoconnect} only the new connections of leecher two are illustrated, though leecher one and three connect to the other seeders as well. This works recursively, so if one of the seeders already has other leechers connected to it, these also will be found. Finally, the topology is just a mesh with $(n\:-\:1)\cdot n$ connections, where $n$ refers to the total number of coupled seeders and leechers and every leecher of each couple is connected to every seeder of all other couples. Figure \ref{fig:mesh} shows this from the point of view of leecher two, which is connected to all others seeders.
+\vfill
+
+\subsubsection{Automatic Connect}
+\label{module:core:net:autoconnect}
+
+Figure \ref{fig:autoconnect} shows how the automatic connect mechanism works. Every leecher has to manually connect to a seeder for the first time, thereafter a leecher is able to automatically connect to other seeders. In order to provide this functionality every leecher, who is coupled with a seeder, announces the address of its coupled seeder to all other seeders it is currently connected with.
+
+In this scenario leechers one, two and three announce the addresses of their seeders to seeder four, which broadcasts these addresses to all connected leechers. This way the leechers get to know each other and can connect to the remaining seeders. In figure \ref{fig:autoconnect} only the new connections of leecher two are illustrated, though leecher one and three connect to the other seeders as well. This works recursively, so if one of the seeders already has other leechers connected to it, these also will be found. Finally, the topology is a mesh with $(n\:-\:1)\:*\:n$ connections, where $n$ refers to the total number of coupled seeders and leechers and every leecher of each couple is connected to every seeder of all other couples. Figure \ref{fig:mesh} shows this from the point of view of leecher two, which is connected to all others seeders.
 
 The mesh topology implies, that every peer knows exactly, what data sets other peers have and thus can request chunks efficiently, though it adds exponentially growing overhead and thus does not scale indefinitely. To improve scalability, the number of connections per leecher can be limited, which also limits the knowledge of each leecher and thus the ability to make good decisions what to request from whom.
 
-If a leecher loses, for some reason, the connection to a seeder, the framework is able to reconnect, if the seeder is still online. This will be detected by periodic address broadcasts. So if, as shown in figure \ref{fig:reconnect}, leecher one lost the connection to seeder two but leecher one and two are also connected to seeder three, then seeder three will notify leecher one, that seeder two still exists.
+If a leecher loses, for some reason, the connection to a seeder, the framework is able to reconnect, if the seeder is still online. This will be detected by periodic address broadcasts. So if, as shown in figure \ref{fig:reconnect}, leecher one loses the connection to seeder two but leecher one and two are also connected to seeder three, then seeder three will notify leecher one, that seeder two still exists.
 
 
 \subsubsection{Meta Data Announcements}
@@ -63,15 +66,15 @@ After a leecher successfully connected to one or more seeders and has already re
 
 Since downloading more than one chunk at a time from the same seeder is not faster than downloading them sequentially, only one download per seeder at a time is allowed, which also reduces protocol complexity. Because of that, during a chunk download meta data and address announcements are not transferred, because these are obviously of no interest for the leecher. As soon as the chunk download completes, outstanding announcements will be bundled and transferred.
 
-A seeder is allowed to decide whether a chunk request is valid or not, which means depending on the algorithm the seeder can reject a chunk request. If a seeder rejects a chunk request the leecher will not request the same chunk again. The seeder can tell the leecher, that a previously rejected chunk request is valid again by reannouncing this specific chunk. This way complex distribution behavior can easily be implemented.
+A seeder is allowed to decide whether a chunk request is valid or not, which means depending on the algorithm the seeder can reject a chunk request. If a seeder rejects a chunk request, the leecher will not request the same chunk again. The seeder can tell the leecher, that a previously rejected chunk request is valid again by reannouncing this specific chunk. This way complex distribution behavior can easily be implemented.
 
 
 \subsubsection{Nonblocking I/O}
-Network communication is based on \emph{sockets}, which can either be datagram or stream based. Datagram sockets are connectionless, so they are of no importance for this thesis. Instead, the network implementation uses stream sockets. A stream socket is always connected to another socket. Programmatically, these two sockets behave like files. If data is written to a socket, it will be transferred to the other socket and can be read from it then. As with files, socket operations usually block the currently executing \emph{thread} until the requested data is read or written, so this requires one thread per socket to handle multiple sockets concurrently. Unfortunately, threads are a limited resource, because they increase memory and \emph{CPU} usage. Therefore, this concept does not scale well.
+Network communication is based on \emph{sockets}, which can either be datagram or stream based. Datagram sockets are connectionless, so they are of no importance for this thesis. Instead, the network implementation uses stream sockets. A stream socket is always connected to another socket. Programmatically, these two sockets behave like files. If data is written to a socket, it will be transferred to the other socket and can be read from it then. As with files, socket operations usually block the currently executing \emph{thread} until the requested data is read or written, so this requires one thread per socket to handle multiple sockets concurrently. Unfortunately, threads are a limited resource, because they increase memory and \emph{CPU}\footnote{Central processing unit} usage. Therefore, this concept does not scale well.
 
 To handle multiple sockets per thread, so called \emph{nonblocking} sockets in combination with \emph{event-polling} can be used. A nonblocking socket generally does not block on an operation, but returns an error instead, if it is not ready to execute this operation immediately. In combination with event-polling a thread can listen on sockets and be notified when these are ready. With this technique a single thread can handle tens of thousands of sockets.
 
-Unfortunately, nonblocking sockets increase the complexity significantly, so the network implementation uses a framework to simplify the usage of them. The framework is called \emph{Netty 5} and written in Java. Netty supports the separation of the transport protocol and the logic, so underlying transport protocols, like \emph{In-VM}, \emph{TCP}, \emph{SCTP} or \emph{UDT}, can be changed without affecting the logic of the application. By default, only In-VM and TCP is used, which are explained in Section \ref{module:core:net:transport}.
+Unfortunately, nonblocking sockets increase the complexity significantly, so the network implementation uses a framework to simplify the usage of them. The framework is called Netty \cite{Misc:Netty} and written in Java. Netty supports the separation of the transport protocol and the logic, so underlying transport protocols, like \emph{In-VM}, \emph{TCP}, \emph{SCTP} or \emph{UDT}, can be changed without affecting the logic of the application. By default, only In-VM and TCP is used, which are explained in Section \ref{module:core:net:transport}.
 
 \subsubsection{Transport: In-VM and TCP}
 \label{module:core:net:transport}
@@ -84,7 +87,9 @@ Netty also offers common transport protocols like TCP. It is used as a secondary
 \label{module:core:net:traffic}
 In order to simulate and evaluate network applications, the ability to control the bandwidth to have comparable network conditions is needed. The problem with bandwidth limitation, which is also called traffic-shaping, is that the writer can not be throttled. The writer can either write as fast as possible or not write at all. In order to limit the bandwidth, the writer has to be started and stopped periodically. Since readers and writers are identical in terms of bandwidth limitation, the explanation always refers to writers but the same approach works for readers equally well.
 
-If the limitation period is too long, the introduced bandwidth peaks will affect the measurements in a negative way, but if the period is too short instead, overhead will be increased. To perfectly limit the bandwidth an indefinitely short interval is needed. So, if the traffic-shaping shall work reliably the sweet spot between accuracy and minimal overhead has to be found. The network implementation uses a period of 250\,ms, which offers enough precision, because the measurements are done every second. So every measurement contains the average of approximately four bandwidth limitation runs.
+If the limitation period is too long, the introduced bandwidth peaks will affect the measurements in a negative way, but if the period is too short instead, overhead will be increased. To perfectly limit the bandwidth an indefinitely short interval is needed. So, if the traffic-shaping shall work reliably the sweet spot between accuracy and minimal overhead has to be found. 
+
+The network implementation uses a period of 250\,ms, which offers enough precision, because the measurements are done every second. So every measurement contains the average of approximately four bandwidth limitation runs.
 
 The complexity increases using multiple writers, who are not allowed to exceed a shared bandwidth. The main problem is fairness. It is not desired, that one writer gets 95\,\%, while the remaining writers share only 5\,\% of the bandwidth. At the same time a single writer should be able to write at full speed, when no one else is writing. This complex behavior can be achieved using a \emph{leaky-bucket} algorithm and a \emph{priority-queue}.
 
